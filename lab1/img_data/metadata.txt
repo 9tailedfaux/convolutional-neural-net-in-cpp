@@ -1,0 +1,4 @@
+Number		Dims		Class Data
+0		(64, 64, 3)		b'snorkel' (class index: 111 - id: b'n04251144')
+1		(64, 64, 3)		b'barbershop' (class index: 145 - id: b'n02791270')
+2		(64, 64, 3)		b'African elephant, Loxodonta africana' (class index: 199 - id: b'n02504458')
