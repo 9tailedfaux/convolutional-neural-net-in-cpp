@@ -1,4 +1,4 @@
 Number		Dims		Class Data
-0		(64, 64, 3)		b'beacon, lighthouse, beacon light, pharos' (class index: 93 - id: b'n02814860')
-1		(64, 64, 3)		b'bucket, pail' (class index: 190 - id: b'n02909870')
-2		(64, 64, 3)		b'rocking chair, rocker' (class index: 3 - id: b'n04099969')
+0		(64, 64, 3)		b'king penguin, Aptenodytes patagonica' (class index: 41 - id: b'n02056570')
+1		(64, 64, 3)		b'suspension bridge' (class index: 119 - id: b'n04366367')
+2		(64, 64, 3)		b'guinea pig, Cavia cobaya' (class index: 17 - id: b'n02364673')
