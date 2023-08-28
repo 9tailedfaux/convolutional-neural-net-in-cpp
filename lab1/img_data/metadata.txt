@@ -1,4 +1,4 @@
 Number		Dims		Class Data
-0		(64, 64, 3)		b'tarantula' (class index: 43 - id: b'n01774750')
-1		(64, 64, 3)		b'lawn mower, mower' (class index: 138 - id: b'n03649909')
-2		(64, 64, 3)		b'nail' (class index: 29 - id: b'n03804744')
+0		(64, 64, 3)		b'kimono' (class index: 172 - id: b'n03617480')
+1		(64, 64, 3)		b'trilobite' (class index: 174 - id: b'n01768244')
+2		(64, 64, 3)		b'swimming trunks, bathing trunks' (class index: 136 - id: b'n04371430')
