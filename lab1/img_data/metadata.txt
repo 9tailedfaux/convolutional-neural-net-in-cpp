@@ -1,4 +1,4 @@
 Number		Dims		Class Data
-0		(64, 64, 3)		b'king penguin, Aptenodytes patagonica' (class index: 41 - id: b'n02056570')
-1		(64, 64, 3)		b'suspension bridge' (class index: 119 - id: b'n04366367')
-2		(64, 64, 3)		b'guinea pig, Cavia cobaya' (class index: 17 - id: b'n02364673')
+0		(64, 64, 3)		b'tarantula' (class index: 43 - id: b'n01774750')
+1		(64, 64, 3)		b'lawn mower, mower' (class index: 138 - id: b'n03649909')
+2		(64, 64, 3)		b'nail' (class index: 29 - id: b'n03804744')
