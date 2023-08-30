@@ -1,4 +1,4 @@
 Number		Dims		Class Data
-0		(64, 64, 3)		b'projectile, missile' (class index: 49 - id: b'n04008634')
-1		(64, 64, 3)		b'barn' (class index: 133 - id: b'n02793495')
-2		(64, 64, 3)		b'chimpanzee, chimp, Pan troglodytes' (class index: 57 - id: b'n02481823')
+0		(64, 64, 3)		b'rocking chair, rocker' (class index: 3 - id: b'n04099969')
+1		(64, 64, 3)		b'desk' (class index: 85 - id: b'n03179701')
+2		(64, 64, 3)		b'cannon' (class index: 80 - id: b'n02950826')
