@@ -1,4 +1,4 @@
 Number		Dims		Class Data
-0		(64, 64, 3)		b'oboe, hautboy, hautbois' (class index: 20 - id: b'n03838899')
-1		(64, 64, 3)		b'grasshopper, hopper' (class index: 180 - id: b'n02226429')
-2		(64, 64, 3)		b'beacon, lighthouse, beacon light, pharos' (class index: 93 - id: b'n02814860')
+0		(64, 64, 3)		b'potpie' (class index: 23 - id: b'n07875152')
+1		(64, 64, 3)		b'lion, king of beasts, Panthera leo' (class index: 184 - id: b'n02129165')
+2		(64, 64, 3)		b'gasmask, respirator, gas helmet' (class index: 83 - id: b'n03424325')
