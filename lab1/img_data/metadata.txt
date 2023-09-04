@@ -1,4 +1,4 @@
 Number		Dims		Class Data
-0		(64, 64, 3)		b'potpie' (class index: 23 - id: b'n07875152')
-1		(64, 64, 3)		b'lion, king of beasts, Panthera leo' (class index: 184 - id: b'n02129165')
-2		(64, 64, 3)		b'gasmask, respirator, gas helmet' (class index: 83 - id: b'n03424325')
+0		(64, 64, 3)		b'baboon' (class index: 32 - id: b'n02486410')
+1		(64, 64, 3)		b"spider web, spider's web" (class index: 36 - id: b'n04275548')
+2		(64, 64, 3)		b'remote control, remote' (class index: 54 - id: b'n04074963')
