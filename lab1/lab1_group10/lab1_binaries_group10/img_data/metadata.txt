@@ -1,0 +1,4 @@
+Number		Dims		Class Data
+0		(64, 64, 3)		b'tarantula' (class index: 43 - id: b'n01774750')
+1		(64, 64, 3)		b'meat loaf, meatloaf' (class index: 192 - id: b'n07871810')
+2		(64, 64, 3)		b'sea slug, nudibranch' (class index: 165 - id: b'n01950731')
