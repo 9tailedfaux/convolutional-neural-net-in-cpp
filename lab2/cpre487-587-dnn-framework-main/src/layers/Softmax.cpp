@@ -11,7 +11,7 @@ void softMax(Array1D_fp32 input, size_t size) {
         bottomSum += exp(input[n]);
     }
     for (uint32_t n = 0; n < size; n++) {
-        input[n] = exp(input[n] / bottomSum);
+        input[n] = exp(input[n]) / bottomSum;
     }
 }
 }
