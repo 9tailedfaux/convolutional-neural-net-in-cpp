@@ -60,6 +60,10 @@ Model buildToyModel(const fs::path modelPath) {
     // Input shape: 56x56x32
     // Output shape: 28x28x32
 
+    auto maxPool1 = new MaxPoolingLayer({{sizeof(fp32), {56, 56, 32}},
+                                         {sizeof(fp32), {28, 28, 32}}});
+    model.addLayer(maxPool1);
+
     // --- Conv 3: L4 ---
     // Input shape: 28x28x32
     // Output shape: 26x26x64
@@ -82,6 +86,10 @@ Model buildToyModel(const fs::path modelPath) {
     // Input shape: 24x24x64
     // Output shape: 12x12x64
 
+    auto maxPool2 = new MaxPoolingLayer({{sizeof(fp32), {24, 24, 64}},
+                                         {sizeof(fp32), {12, 12, 64}}});
+    model.addLayer(maxPool2);
+
     // --- Conv 5: L7 ---
     // Input shape: 12x12x64
     // Output shape: 10x10x64
@@ -103,6 +111,10 @@ Model buildToyModel(const fs::path modelPath) {
     // --- MPL 3: L9 ---
     // Input shape: 8x8x128
     // Output shape: 4x4x128
+
+    auto maxPool3 = new MaxPoolingLayer({{sizeof(fp32), {8, 8, 128}},
+                                         {sizeof(fp32), {4, 4, 128}}});
+    model.addLayer(maxPool3);
 
     // --- Flatten 1: L10 ---
     // Input shape: 4x4x128
@@ -179,7 +191,7 @@ void runLayerTest(const std::size_t layerNum, const Model& model, const fs::path
 
 void runInfrenceTest(const Model& model, const fs::path& basePath) {
     // Load an image
-    logInfo("--- Running Infrence Test ---");
+    logInfo("--- Running (FULL) Infrence Test ---");
     dimVec inDims = {64, 64, 3};
 
     // Construct a LayerData object from a LayerParams one
