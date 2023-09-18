@@ -50,6 +50,12 @@ Model buildToyModel(const fs::path modelPath) {
     // Input shape: 60x60x32
     // Output shape: 56x56x32
 
+    auto conv2 = new ConvolutionalLayer({{sizeof(fp32), {60, 60, 32}},
+                                         {sizeof(fp32), {56, 56, 32}},
+                                         {sizeof(fp32), {5, 5, 32, 32}, modelPath / "conv2_weights.bin"},
+                                         {sizeof(fp32), {32}, modelPath / "conv2_biases.bin"}});
+    model.addLayer(conv2);
+
     // --- MPL 1: L3 ---
     // Input shape: 56x56x32
     // Output shape: 28x28x32
@@ -57,10 +63,20 @@ Model buildToyModel(const fs::path modelPath) {
     // --- Conv 3: L4 ---
     // Input shape: 28x28x32
     // Output shape: 26x26x64
+    auto conv3 = new ConvolutionalLayer({{sizeof(fp32), {28, 28, 32}},
+                                         {sizeof(fp32), {26, 26, 64}},
+                                         {sizeof(fp32), {5, 5, 32, 64}, modelPath / "conv3_weights.bin"},
+                                         {sizeof(fp32), {64}, modelPath /  "conv3_biases.bin"}});
+    model.addLayer(conv3);
 
     // --- Conv 4: L5 ---
     // Input shape: 26x26x64
     // Output shape: 24x24x64
+    auto conv4 = new ConvolutionalLayer({{sizeof(fp32), {26, 26, 64}},
+                                         {sizeof(fp32), {24, 24, 64}},
+                                         {sizeof(fp32), {5, 5, 64, 64}, modelPath / "conv3_weights.bin"},
+                                         {sizeof(fp32), {64}, modelPath /  "conv3_biases.bin"}});
+    model.addLayer(conv4);
 
     // --- MPL 2: L6 ---
     // Input shape: 24x24x64
@@ -69,10 +85,20 @@ Model buildToyModel(const fs::path modelPath) {
     // --- Conv 5: L7 ---
     // Input shape: 12x12x64
     // Output shape: 10x10x64
+    auto conv5 = new ConvolutionalLayer({{sizeof(fp32), {12, 12, 64}},
+                                         {sizeof(fp32), {10, 10, 64}},
+                                         {sizeof(fp32), {5, 5, 64, 64}, modelPath / "conv3_weights.bin"},
+                                         {sizeof(fp32), {64}, modelPath /  "conv3_biases.bin"}});
+    model.addLayer(conv5);
 
     // --- Conv 6: L8 ---
     // Input shape: 10x10x64
     // Output shape: 8x8x128
+    auto conv6 = new ConvolutionalLayer({{sizeof(fp32), {10, 10, 64}},
+                                         {sizeof(fp32), {8, 8, 128}},
+                                         {sizeof(fp32), {5, 5, 64, 128}, modelPath / "conv3_weights.bin"},
+                                         {sizeof(fp32), {128}, modelPath /  "conv3_biases.bin"}});
+    model.addLayer(conv6);
 
     // --- MPL 3: L9 ---
     // Input shape: 8x8x128
