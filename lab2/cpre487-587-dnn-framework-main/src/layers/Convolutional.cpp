@@ -1,6 +1,7 @@
 #include "Convolutional.h"
 
 #include <iostream>
+#include <vector>
 
 #include "../Types.h"
 #include "../Utils.h"
@@ -11,7 +12,54 @@ namespace ML {
 
 // Compute the convultion for the layer data
 void ConvolutionalLayer::computeNaive(const LayerData& dataIn) const {
-    // TODO: Your Code Here...
+    Array3D_fp32 inData = dataIn.getData<Array3D_fp32>();
+    Array3D_fp32 outData = getOutputData().getData<Array3D_fp32>();
+    Array4D_fp32 filter = weightData.getData<Array4D_fp32>();
+    Array1D_fp32 biases = biasData.getData<Array1D_fp32>();
+
+    LayerParams inputParams = getInputParams();
+    size_t C = inputParams.dims[2]; //channels in input
+    // size_t W = inputParams.dims[0]; //width of input
+    // size_t H = inputParams.dims[1]; //height of input
+
+    LayerParams outParams = getOutputParams();
+    size_t M = outParams.dims[2];
+    size_t Q = outParams.dims[0];
+    size_t P = outParams.dims[1];
+
+    size_t R = weightParam.dims[0];
+    size_t S = weightParam.dims[1];
+
+    //printf("Checkpoint 3\n");
+
+    short UP = 2, UQ = 2; //TODO: determine actual stride
+
+    for (uint32_t m = 0; m < M; m++) {
+        //printf("Checkpoint 4. m = %d\n", m);
+        for (uint32_t p = 0; p < P; p++) {
+            //printf("Checkpoint 5. p = %d\n", p);
+            for (uint32_t q = 0; q < Q; q++) {
+                //printf("Checkpoint 6. q = %d\n", q);
+                fp32 thisOutput = 0;
+                for (uint32_t c = 0; c < C; c += 1) { //fuck you
+                    //printf("Checkpoint 7. c = %d\n", c);
+                    for (uint32_t r = 0; r < R; r++) {
+                        //printf("Checkpoint 8. r = %d\n", r);
+                        for (uint32_t s = 0; s < S; s++) {
+                            //printf("Checkpoint 9. s = %d\n", s);
+
+                            thisOutput += ((inData[UQ + s][UP + r][c] * filter[s][r][c][m]) + biases[m]);
+                        }
+                    }
+                }
+                outData[q][p][m] = thisOutput;
+            }
+        }
+    }
+
+    
+    //printf("%lf", data[0][0][0]);
+
 }
 
 // Compute the convolution using threads
