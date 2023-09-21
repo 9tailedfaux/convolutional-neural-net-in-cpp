@@ -24,8 +24,8 @@ void DenseLayer::computeNaive(const LayerData& dataIn) const {
     LayerParams outParams = getOutputParams();
     size_t M = outParams.dims[0];
 
-    size_t R = weightParam.dims[0];
-    size_t S = weightParam.dims[1];    
+    //size_t R = weightParam.dims[0];
+    //size_t S = weightParam.dims[1];    
     
     for (u_int32_t m = 0; m < M; m++) {
         fp32 thisOutput = 0;
@@ -34,21 +34,20 @@ void DenseLayer::computeNaive(const LayerData& dataIn) const {
         }
         outData[m] = thisOutput + biases[m];
     }
-    softMax(outData, N);
 }
 
 // Compute the convolution using threads
-void ConvolutionalLayer::computeThreaded(const LayerData& dataIn) const {
+void DenseLayer::computeThreaded(const LayerData& dataIn) const {
     // TODO: Your Code Here...
 }
 
 // Compute the convolution using a tiled approach
-void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
+void DenseLayer::computeTiled(const LayerData& dataIn) const {
     // TODO: Your Code Here...
 }
 
 // Compute the convolution using SIMD
-void ConvolutionalLayer::computeSIMD(const LayerData& dataIn) const {
+void DenseLayer::computeSIMD(const LayerData& dataIn) const {
     // TODO: Your Code Here...
 }
 }  // namespace ML

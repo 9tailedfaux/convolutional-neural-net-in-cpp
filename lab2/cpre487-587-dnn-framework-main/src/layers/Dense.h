@@ -8,7 +8,7 @@ namespace ML {
 class DenseLayer : public Layer {
    public:
     DenseLayer(const LayerParams inParams, const LayerParams outParams, const LayerParams weightParams, const LayerParams biasParams)
-        : Layer(inParams, outParams, LayerType::CONVOLUTIONAL),
+        : Layer(inParams, outParams, LayerType::DENSE),
           weightParam(weightParams),
           weightData(weightParams),
           biasParam(biasParams),
