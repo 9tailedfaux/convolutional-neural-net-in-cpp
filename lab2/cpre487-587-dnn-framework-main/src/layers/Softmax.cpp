@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Softmax.h"
 #include "../Types.h"
 #include <cmath>
