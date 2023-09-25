@@ -52,7 +52,7 @@ void ConvolutionalLayer::computeNaive(const LayerData& dataIn) const {
                         }
                     }
                 }
-                outData[q][p][m] = thisOutput + biases[m];
+                outData[q][p][m] = relu(thisOutput + biases[m]);
             }
         }
     }
@@ -76,4 +76,6 @@ void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
 void ConvolutionalLayer::computeSIMD(const LayerData& dataIn) const {
     // TODO: Your Code Here...
 }
+
+fp32 relu(const fp32 input) { return input < 0 ? 0 : input; }
 }  // namespace ML

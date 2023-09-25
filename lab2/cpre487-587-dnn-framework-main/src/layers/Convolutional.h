@@ -40,6 +40,8 @@ class ConvolutionalLayer : public Layer {
     virtual void computeTiled(const LayerData& dataIn) const override;
     virtual void computeSIMD(const LayerData& dataIn) const override;
 
+    virtual fp32 relu(const fp32 input) const;
+
    private:
     LayerParams weightParam;
     LayerData weightData;
