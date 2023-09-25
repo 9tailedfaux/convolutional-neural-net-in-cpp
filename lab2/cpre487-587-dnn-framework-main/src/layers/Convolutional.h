@@ -41,6 +41,7 @@ class ConvolutionalLayer : public Layer {
     virtual void computeSIMD(const LayerData& dataIn) const override;
 
     virtual fp32 relu(const fp32 input) const;
+    virtual short stride(const size_t inDim, const size_t outDim, const size_t filterDim) const;
 
    private:
     LayerParams weightParam;

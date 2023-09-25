@@ -19,20 +19,21 @@ void ConvolutionalLayer::computeNaive(const LayerData& dataIn) const {
 
     LayerParams inputParams = getInputParams();
     size_t C = inputParams.dims[2]; //channels in input
-    // size_t W = inputParams.dims[0]; //width of input
-    // size_t H = inputParams.dims[1]; //height of input
+    size_t W = inputParams.dims[0]; //width of input
+    size_t H = inputParams.dims[1]; //height of input
 
     LayerParams outParams = getOutputParams();
-    size_t M = outParams.dims[2];
-    size_t Q = outParams.dims[0];
-    size_t P = outParams.dims[1];
+    size_t M = outParams.dims[2]; //channels in output
+    size_t Q = outParams.dims[0]; //width of output
+    size_t P = outParams.dims[1]; //height of output
 
-    size_t R = weightParam.dims[0];
-    size_t S = weightParam.dims[1];
+    size_t R = weightParam.dims[0]; //height of filter
+    size_t S = weightParam.dims[1]; //width of filter
 
     //printf("Checkpoint 3\n");
 
-    short UP = 2, UQ = 2; //TODO: determine actual stride
+    short UP = stride(H, P, R);
+    short UQ = stride(W, Q, S);
 
     for (uint32_t m = 0; m < M; m++) {
         //printf("Checkpoint 4. m = %d\n", m);
@@ -78,4 +79,5 @@ void ConvolutionalLayer::computeSIMD(const LayerData& dataIn) const {
 }
 
 fp32 relu(const fp32 input) { return input < 0 ? 0 : input; }
+short stride(const size_t inDim, const size_t outDim, const size_t filterDim) { return (short)((inDim - filterDim) / (outDim - 1)); }
 }  // namespace ML
