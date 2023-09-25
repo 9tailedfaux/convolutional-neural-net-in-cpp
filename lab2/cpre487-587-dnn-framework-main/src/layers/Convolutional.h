@@ -40,8 +40,7 @@ class ConvolutionalLayer : public Layer {
     virtual void computeTiled(const LayerData& dataIn) const override;
     virtual void computeSIMD(const LayerData& dataIn) const override;
 
-    virtual fp32 relu(const fp32 input) const;
-    virtual short stride(const size_t inDim, const size_t outDim, const size_t filterDim) const;
+    
 
    private:
     LayerParams weightParam;
@@ -51,4 +50,6 @@ class ConvolutionalLayer : public Layer {
     LayerData biasData;
 };
 
+fp32 relu(const fp32 input);
+short stride(const size_t inDim, const size_t outDim, const size_t filterDim);
 }  // namespace ML
