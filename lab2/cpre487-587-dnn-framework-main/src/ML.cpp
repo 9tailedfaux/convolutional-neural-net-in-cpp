@@ -145,9 +145,9 @@ Model buildToyModel(const fs::path modelPath) {
     // --- Softmax 1: L13 ---
     // Input shape: 200
     // Output shape: 200
-    auto softmax = new SoftmaxLayer({{sizeof(fp32), {200}},
-                                     {sizeof(fp32), {200}}});
-    model.addLayer(softmax);
+    // auto softmax = new SoftmaxLayer({{sizeof(fp32), {200}},
+    //                                  {sizeof(fp32), {200}}});
+    // model.addLayer(softmax);
 
 
     return model;

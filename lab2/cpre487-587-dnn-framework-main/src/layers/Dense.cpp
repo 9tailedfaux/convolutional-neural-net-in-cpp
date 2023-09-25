@@ -34,6 +34,7 @@ void DenseLayer::computeNaive(const LayerData& dataIn) const {
         }
         outData[m] = thisOutput + biases[m];
     }
+    softMax(outData, N);
 }
 
 // Compute the convolution using threads
