@@ -80,6 +80,7 @@ template <typename T> void Model::allocLayers() {
         case Layer::LayerType::FLATTEN:
             // assert(false && "Cannot allocate uimplemented layer");
             ((FlattenLayer*) layers[i])->allocateLayer<T>();
+            break;
         case Layer::LayerType::NONE:
             [[fallthrough]];
         default:
@@ -110,6 +111,7 @@ template <typename T> void Model::freeLayers() {
             break;
         case Layer::LayerType::FLATTEN:
             ((FlattenLayer*) layers[i])->freeLayer<T>();
+            break;
         case Layer::LayerType::NONE:
             [[fallthrough]];
         default:

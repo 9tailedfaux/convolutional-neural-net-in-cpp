@@ -28,13 +28,20 @@ void DenseLayer::computeNaive(const LayerData& dataIn) const {
     //size_t S = weightParam.dims[1];    
     
     for (u_int32_t m = 0; m < M; m++) {
+        //printf("m: %d\n", (int)m);
         fp32 thisOutput = 0;
         for (u_int32_t n = 0; n < N; n++) {
-            thisOutput += (weights[m][n] * inData[n]);
+            if (inData[n] > 100.0) {
+                printf("indata[%d]: %lf\n", (int)n, inData[n]);
+            }
+            
+            thisOutput += (weights[n][m] * inData[n]);
+            
         }
         outData[m] = thisOutput + biases[m];
     }
-    softMax(outData, N);
+    softMax(outData, M);
+    //printf("outdata: %lf\n", outData[200]);
 }
 
 // Compute the convolution using threads

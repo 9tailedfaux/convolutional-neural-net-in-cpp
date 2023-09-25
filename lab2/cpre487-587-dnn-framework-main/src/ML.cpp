@@ -70,8 +70,8 @@ Model buildToyModel(const fs::path modelPath) {
     // Output shape: 26x26x64
     auto conv3 = new ConvolutionalLayer({{sizeof(fp32), {28, 28, 32}},
                                          {sizeof(fp32), {26, 26, 64}},
-                                         {sizeof(fp32), {5, 5, 32, 64}, modelPath / "conv3_weights.bin"},
-                                         {sizeof(fp32), {64}, modelPath /  "conv3_biases.bin"}});
+                                         {sizeof(fp32), {3, 3, 32, 64}, modelPath / "conv3_weights.bin"},
+                                         {sizeof(fp32), {64}, modelPath / "conv3_biases.bin"}});
     model.addLayer(conv3);
 
     // --- Conv 4: L5 ---
@@ -79,8 +79,8 @@ Model buildToyModel(const fs::path modelPath) {
     // Output shape: 24x24x64
     auto conv4 = new ConvolutionalLayer({{sizeof(fp32), {26, 26, 64}},
                                          {sizeof(fp32), {24, 24, 64}},
-                                         {sizeof(fp32), {5, 5, 64, 64}, modelPath / "conv4_weights.bin"},
-                                         {sizeof(fp32), {64}, modelPath /  "conv4_biases.bin"}});
+                                         {sizeof(fp32), {3, 3, 64, 64}, modelPath / "conv4_weights.bin"},
+                                         {sizeof(fp32), {64}, modelPath / "conv4_biases.bin"}});
     model.addLayer(conv4);
 
     // --- MPL 2: L6 ---
@@ -96,7 +96,7 @@ Model buildToyModel(const fs::path modelPath) {
     // Output shape: 10x10x64
     auto conv5 = new ConvolutionalLayer({{sizeof(fp32), {12, 12, 64}},
                                          {sizeof(fp32), {10, 10, 64}},
-                                         {sizeof(fp32), {5, 5, 64, 64}, modelPath / "conv5_weights.bin"},
+                                         {sizeof(fp32), {3, 3, 64, 64}, modelPath / "conv5_weights.bin"},
                                          {sizeof(fp32), {64}, modelPath /  "conv5_biases.bin"}});
     model.addLayer(conv5);
 
@@ -105,7 +105,7 @@ Model buildToyModel(const fs::path modelPath) {
     // Output shape: 8x8x128
     auto conv6 = new ConvolutionalLayer({{sizeof(fp32), {10, 10, 64}},
                                          {sizeof(fp32), {8, 8, 128}},
-                                         {sizeof(fp32), {5, 5, 64, 128}, modelPath / "conv6_weights.bin"},
+                                         {sizeof(fp32), {3, 3, 64, 128}, modelPath / "conv6_weights.bin"},
                                          {sizeof(fp32), {128}, modelPath /  "conv6_biases.bin"}});
     model.addLayer(conv6);
 
@@ -129,7 +129,7 @@ Model buildToyModel(const fs::path modelPath) {
     // Output shape: 256
     auto dense1 = new DenseLayer({{sizeof(fp32), {2048}},
                                   {sizeof(fp32), {256}},
-                                  {sizeof(fp32), {5, 5, 2048, 256}, modelPath / "dense1_weights.bin"},
+                                  {sizeof(fp32), {2048, 256}, modelPath / "dense1_weights.bin"},
                                   {sizeof(fp32), {256}, modelPath / "dense1_biases.bin"}});
     model.addLayer(dense1);
 
@@ -138,7 +138,7 @@ Model buildToyModel(const fs::path modelPath) {
     // Output shape: 200
     auto dense2 = new DenseLayer({{sizeof(fp32), {256}},
                                   {sizeof(fp32), {200}},
-                                  {sizeof(fp32), {5, 5, 256, 200}, modelPath / "dense2_weights.bin"},
+                                  {sizeof(fp32), {256, 200}, modelPath / "dense2_weights.bin"},
                                   {sizeof(fp32), {200}, modelPath / "dense2_biases.bin"}});
     model.addLayer(dense2);
 
@@ -215,7 +215,7 @@ void runInfrenceTest(const Model& model, const fs::path& basePath) {
     // Construct a LayerData object from a LayerParams one
     LayerData img({sizeof(fp32), inDims, basePath / "image_0.bin"});
     img.loadData<Array3D_fp32>();
-
+    printf("running inference on model\n");
     // Run infrence on the model
     const LayerData output = model.infrence(img, Layer::InfType::NAIVE);
 

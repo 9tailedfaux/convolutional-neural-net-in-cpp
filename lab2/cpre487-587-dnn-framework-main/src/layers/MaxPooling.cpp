@@ -28,17 +28,18 @@ void MaxPoolingLayer::computeNaive(const LayerData& dataIn) const {
         for (uint32_t x = 0; x < inputHeight; x +=2) {
             for (uint32_t z = 0; z < channels; z++) {
 
-                int _1 = inData[x][y][z];
-                int _2 = inData[x+1][y][z];
-                int _3 = inData[x][y+1][z];
-                int _4 = inData[x+1][y+1][z];
-                int vals[4] = {_1, _2, _3, _4};
-                int max = INT_MIN;
-                for (int i = 0; i < (int)(sizeof(vals)/sizeof(vals[0])); i++) {
+                fp32 _1 = inData[x][y][z];
+                fp32 _2 = inData[x+1][y][z];
+                fp32 _3 = inData[x][y+1][z];
+                fp32 _4 = inData[x+1][y+1][z];
+                fp32 vals[4] = {_1, _2, _3, _4};
+                fp32 max = vals[0];
+                for (int i = 1; i < 4; i++) {
                     if (vals[i] > max) max = vals[i];
                 }
 
                 outData[x/2][y/2][z] = max;
+                //printf("max: %lf\n", max);
             }
         }
     }
