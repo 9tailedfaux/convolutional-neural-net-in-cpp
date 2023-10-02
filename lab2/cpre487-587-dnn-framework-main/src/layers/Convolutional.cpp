@@ -42,18 +42,18 @@ void ConvolutionalLayer::computeNaive(const LayerData& dataIn) const {
             for (uint32_t q = 0; q < Q; q++) {
                 //printf("Checkpoint 6. q = %d\n", q);
                 fp32 thisOutput = 0;
-                for (uint32_t c = 0; c < C; c += 1) { //fuck you
+                for (uint32_t c = 0; c < C; c += 1) { //lol
                     //printf("Checkpoint 7. c = %d\n", c);
                     for (uint32_t r = 0; r < R; r++) {
                         //printf("Checkpoint 8. r = %d\n", r);
                         for (uint32_t s = 0; s < S; s++) {
                             //printf("Checkpoint 9. s = %d\n", s);
 
-                            thisOutput += ((inData[UQ + s][UP + r][c] * filter[s][r][c][m]));
+                            thisOutput += ((inData[UP + r][UQ + s][c] * filter[r][s][c][m]));
                         }
                     }
                 }
-                outData[q][p][m] = relu(thisOutput + biases[m]);
+                outData[p][q][m] = relu(thisOutput + biases[m]);
             }
         }
     }
