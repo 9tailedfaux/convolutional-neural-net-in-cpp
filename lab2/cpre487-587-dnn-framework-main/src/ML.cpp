@@ -245,13 +245,14 @@ int main(int argc, char** argv) {
     model.allocLayers<fp32>();
 
     // Run some framework tests as an example of loading data
-    runBasicTest(model, basePath);
+    //runBasicTest(model, basePath);
 
     // Run a layer infrence test
-    runLayerTest(0, model, basePath);
+    //runLayerTest(0, model, basePath);
 
     // Run an end-to-end infrence test
     runInfrenceTest(model, basePath);
+    
 
     // Clean up
     model.freeLayers<fp32>();
