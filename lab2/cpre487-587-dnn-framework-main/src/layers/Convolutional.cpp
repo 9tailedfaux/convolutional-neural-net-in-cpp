@@ -87,7 +87,7 @@ void threadFunction(
                 }
             }
         }
-        *thisOutput = relu(*thisOutput + biases[m])
+        *thisOutput = relu(*thisOutput + biases[m]);
 }
 
 // Compute the convolution using threads
