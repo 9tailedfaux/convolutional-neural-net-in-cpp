@@ -47,11 +47,11 @@ void MaxPoolingLayer::computeNaive(const LayerData& dataIn) const {
 }
 
 void MaxPoolingLayer::computeThreaded(const LayerData& dataIn) const {
-    // TODO: Your Code Here...
+    computeNaive(dataIn);
 }
 
 void MaxPoolingLayer::computeTiled(const LayerData& dataIn) const {
-    // TODO: Your Code Here...
+    computeNaive(dataIn);
 }
 
 void MaxPoolingLayer::computeSIMD(const LayerData& dataIn) const {

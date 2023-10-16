@@ -32,7 +32,7 @@ void DenseLayer::computeNaive(const LayerData& dataIn) const {
         fp32 thisOutput = 0;
         for (u_int32_t n = 0; n < N; n++) {
             if (inData[n] > 100.0) {
-                printf("indata[%d]: %lf\n", (int)n, inData[n]);
+                //printf("indata[%d]: %lf\n", (int)n, inData[n]);
             }
             
             thisOutput += (weights[n][m] * inData[n]);
@@ -46,12 +46,12 @@ void DenseLayer::computeNaive(const LayerData& dataIn) const {
 
 // Compute the convolution using threads
 void DenseLayer::computeThreaded(const LayerData& dataIn) const {
-    // TODO: Your Code Here...
+    computeNaive(dataIn);
 }
 
 // Compute the convolution using a tiled approach
 void DenseLayer::computeTiled(const LayerData& dataIn) const {
-    // TODO: Your Code Here...
+    computeNaive(dataIn);
 }
 
 // Compute the convolution using SIMD
