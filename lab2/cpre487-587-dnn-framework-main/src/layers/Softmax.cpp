@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 56dfc0fd583cae07252afc8b9a5a38a80c3bb394
 #include "Softmax.h"
 #include "../Types.h"
 #include <cmath>
