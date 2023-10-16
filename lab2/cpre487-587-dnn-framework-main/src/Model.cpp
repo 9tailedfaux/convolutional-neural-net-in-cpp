@@ -7,10 +7,14 @@ namespace ML {
 // Run infrence on the entire model using the inData and outputting the outData
 // infType can be used to determine the infrence function to call
 const LayerData& Model::infrence(const LayerData& inData, const Layer::InfType infType) const {
+    
+    printf("layers size %d\n", (int)layers.size());
     assert(layers.size() > 0 && "There must be at least 1 layer to perform infrence");
+    printf("inferening layer 0\n");
     infrenceLayer(inData, 0, infType);
 
     for (std::size_t i = 1; i < layers.size(); i++) {
+        printf("inferencing layer %d\n", (int)i);
         infrenceLayer(layers[i - 1]->getOutputData(), i, infType);
     }
 

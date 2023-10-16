@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1695667721">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1696881110">
   <File Type="VDS-TIMING-PB" Name="staged_mac_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="staged_mac_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="staged_mac.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="staged_mac_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="staged_mac_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="staged_mac_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="staged_mac.vds"/>
   <File Type="REPORTS-TCL" Name="staged_mac_reports.tcl"/>
   <File Type="PA-TCL" Name="staged_mac.tcl"/>
-  <File Type="RDS-RDS" Name="staged_mac.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="staged_mac_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="staged_mac_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="staged_mac_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../hdl/staged_mac.vhd">
@@ -44,9 +44,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
