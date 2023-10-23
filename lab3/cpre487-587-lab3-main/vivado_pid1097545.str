@@ -1,0 +1,928 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:35 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 1097545
+License: Customer
+
+Current time: 	Mon Oct 23 12:04:12 CDT 2023
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Red Hat Enterprise Linux release 8.8 (Ootpa)
+OS Version: 4.18.0-477.21.1.el8_8.x86_64
+OS Architecture: amd64
+Available processors (cores): 20
+
+Display: :1
+Screen size: 1920x1200
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/remote/Xilinx/2020.1/Vivado/2020.1/tps/lnx64/jre9.0.4
+Java executable location: 	/remote/Xilinx/2020.1/Vivado/2020.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	tjfriedl
+User home directory: /home/tjfriedl
+User working directory: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /remote/Xilinx/2020.1/Vivado
+HDI_APPROOT: /remote/Xilinx/2020.1/Vivado/2020.1
+RDI_DATADIR: /remote/Xilinx/2020.1/Vivado/2020.1/data
+RDI_BINDIR: /remote/Xilinx/2020.1/Vivado/2020.1/bin
+
+Vivado preferences file location: /home/tjfriedl/.Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: /home/tjfriedl/.Xilinx/Vivado/2020.1/
+Vivado layouts directory: /home/tjfriedl/.Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	/remote/Xilinx/2020.1/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/vivado.log
+Vivado journal file location: 	/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1097545-co2050-24.ece.iastate.edu
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /remote/Xilinx/2020.1/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: /remote/Xilinx/2020.1/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: /remote/Xilinx/2020.1/Vivado/2020.1
+XILINX_SDK: /remote/Xilinx/2020.1/Vitis/2020.1
+XILINX_VITIS: /remote/Xilinx/2020.1/Vitis/2020.1
+XILINX_VIVADO: /remote/Xilinx/2020.1/Vivado/2020.1
+XILINX_VIVADO_HLS: /remote/Xilinx/2020.1/Vivado/2020.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,326 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,326 MB. GUI used memory: 66 MB. Current time: 10/23/23, 12:04:13 PM CDT
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // af (cs)
+selectMenuItem(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr"); // ai (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+// [GUI Memory]: 107 MB (+109452kb) [00:01:11]
+// [Engine Memory]: 1,328 MB (+1241098kb) [00:01:11]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 120 MB (+8187kb) [00:01:16]
+// WARNING: HEventQueue.dispatchEvent() is taking  1487 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 7255.590 ; gain = 34.246 ; free physical = 16474 ; free virtual = 42604 
+// Project name: tc_staged_mac; location: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac; part: xc7z020clg484-1
+dismissDialog("Open Project"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,391 MB. GUI used memory: 76 MB. Current time: 10/23/23, 12:05:23 PM CDT
+// [Engine Memory]: 1,407 MB (+13239kb) [00:01:20]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 69 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false, false, false, false, false, true); // B (F, cs) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,414 MB. GUI used memory: 78 MB. Current time: 10/23/23, 12:06:33 PM CDT
+// Elapsed time: 45 seconds
+selectCodeEditor("staged_mac.vhd", 421, 195); // bP (w, cs)
+// Elapsed time: 50 seconds
+selectCodeEditor("staged_mac.vhd", 115, 413); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 126 MB (+269kb) [00:04:08]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,442 MB. GUI used memory: 78 MB. Current time: 10/23/23, 12:08:13 PM CDT
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Mon Oct 23 12:08:19 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 175 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+// Elapsed time: 17 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Mon Oct 23 12:11:33 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 17 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 41 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ag)
+dismissDialog("Implementation Completed"); // ag (cs)
+selectCodeEditor("staged_mac.vhd", 312, 409); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 137 MB (+4592kb) [00:08:46]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,470 MB. GUI used memory: 81 MB. Current time: 10/23/23, 12:12:53 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,479 MB (+1161kb) [00:09:34]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 114 seconds
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,508 MB. GUI used memory: 82 MB. Current time: 10/23/23, 12:14:13 PM CDT
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Mon Oct 23 12:14:16 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 175 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Mon Oct 23 12:17:13 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 68 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,701 MB. GUI used memory: 83 MB. Current time: 10/23/23, 12:18:28 PM CDT
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,182 MB. GUI used memory: 83 MB. Current time: 10/23/23, 12:18:30 PM CDT
+// [Engine Memory]: 2,191 MB (+669267kb) [00:14:26]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 2,403 MB (+107663kb) [00:14:27]
+// Device: addNotify
+// [GUI Memory]: 144 MB (+37kb) [00:14:27]
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg484-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7427.277 ; gain = 0.000 ; free physical = 15926 ; free virtual = 42179 
+// Tcl Message: INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8040.730 ; gain = 0.000 ; free physical = 15344 ; free virtual = 41598 
+// Tcl Message: Restored from archive | CPU: 0.010000 secs | Memory: 0.101204 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8040.730 ; gain = 0.000 ; free physical = 15344 ; free virtual = 41598 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8040.730 ; gain = 0.000 ; free physical = 15344 ; free virtual = 41598 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// Tcl Message: open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 8277.914 ; gain = 903.137 ; free physical = 15176 ; free virtual = 41433 
+// TclEventType: DRC_ADDED
+// [GUI Memory]: 174 MB (+24228kb) [00:14:28]
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dZ' command handler elapsed time: 10 seconds
+// Elapsed time: 10 seconds
+dismissDialog("Open Implemented Design"); // bz (cs)
+// [GUI Memory]: 185 MB (+2135kb) [00:14:32]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 2); // m (l, cs)
+// Elapsed time: 12 seconds
+selectTab((HResource) null, (HResource) null, "Power", 5); // aL (aI, cs)
+selectTab((HResource) null, (HResource) null, "Timing", 7); // aL (aI, cs)
+selectTab((HResource) null, (HResource) null, "Power", 5); // aL (aI, cs)
+// Elapsed time: 72 seconds
+selectCodeEditor("staged_mac.vhd", 347, 382); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 355, 379); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("staged_mac.vhd", 253, 367); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 36 seconds
+selectCodeEditor("staged_mac.vhd", 311, 212); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,461 MB. GUI used memory: 122 MB. Current time: 10/23/23, 12:21:23 PM CDT
+// Elapsed time: 29 seconds
+selectCodeEditor("staged_mac.vhd", 485, 372); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 498, 378); // bP (w, cs)
+// Elapsed time: 52 seconds
+selectCodeEditor("staged_mac.vhd", 172, 359); // bP (w, cs)
+// Elapsed time: 32 seconds
+selectCodeEditor("staged_mac.vhd", 455, 473); // bP (w, cs)
+// Elapsed time: 33 seconds
+selectCodeEditor("staged_mac.vhd", 334, 355); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 335, 364); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("staged_mac.vhd", 322, 369); // bP (w, cs)
+// Elapsed time: 69 seconds
+selectCodeEditor("staged_mac.vhd", 447, 343); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 436, 371); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 452, 349); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectCodeEditor("staged_mac.vhd", 115, 346); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,478 MB. GUI used memory: 122 MB. Current time: 10/23/23, 12:25:13 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("staged_mac.vhd", 122, 182); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("staged_mac.vhd", 125, 190); // bP (w, cs)
+// Elapsed time: 67 seconds
+selectCodeEditor("staged_mac.vhd", 348, 262); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("staged_mac.vhd", 364, 315); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 372, 301); // bP (w, cs)
+// Elapsed time: 30 seconds
+selectCodeEditor("staged_mac.vhd", 305, 558); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,511 MB. GUI used memory: 122 MB. Current time: 10/23/23, 12:27:33 PM CDT
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Mon Oct 23 12:27:38 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 41 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+dismissDialog("Launch Runs"); // f (cs)
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cs)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,514 MB. GUI used memory: 111 MB. Current time: 10/23/23, 12:28:24 PM CDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 2,514 MB. GUI used memory: 112 MB. Current time: 10/23/23, 12:28:24 PM CDT
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// bz (cs):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bz (cs)
+selectButton(RDIResource.QuickHelp_HELP, (String) null); // k (H, cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Mon Oct 23 12:28:30 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(RDIResource.HPopupTitle_CLOSE, (String) null); // k (n, ResizableWindow)
+selectCodeEditor("staged_mac.vhd", 105, 276); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 234, 332); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 171, 310); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 160, 308); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 274, 319); // bP (w, cs)
+// TclEventType: RUN_STEP_COMPLETED
+selectCodeEditor("staged_mac.vhd", 109, 279); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 332, 275); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 107, 283); // bP (w, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 21 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// TclEventType: SDC_CONSTRAINT_ADD
+// Tcl Message: open_run impl_1 
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,521 MB. GUI used memory: 90 MB. Current time: 10/23/23, 12:29:08 PM CDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 2,554 MB (+32552kb) [00:25:04]
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8314.793 ; gain = 0.000 ; free physical = 13601 ; free virtual = 39868 
+// Tcl Message: INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8314.793 ; gain = 0.000 ; free physical = 13464 ; free virtual = 39731 
+// Tcl Message: Restored from archive | CPU: 0.010000 secs | Memory: 0.100792 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8314.793 ; gain = 0.000 ; free physical = 13464 ; free virtual = 39731 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8314.793 ; gain = 0.000 ; free physical = 13464 ; free virtual = 39731 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// V (cs): Critical Messages: addNotify
+dismissDialog("Open Implemented Design"); // bz (cs)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (V)
+dismissDialog("Critical Messages"); // V (cs)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Edit Timing Constraints]", 21, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WINDOW
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ; main ; 5.0 ; 0.0 ; 0.05 ; false ; [get_ports ACLK] ; /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc ;  ; ", 0, "5.0", 2); // f (J, cs)
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ; main ; 5.0 ; 0.0 ; 0.05 ; false ; [get_ports ACLK] ; /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc ;  ; ", 0, "5.0", 2, false, false, false, false, true); // f (J, cs) - Double Click
+// bs (cs): Edit Create Clock: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 2,579 MB. GUI used memory: 141 MB. Current time: 10/23/23, 12:29:28 PM CDT
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "6.0"); // b (E, bs)
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "7.0"); // b (E, bs)
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "6.0"); // b (E, bs)
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "5.0"); // b (E, bs)
+// Elapsed time: 25 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (bs)
+// bz (bs):  Validate XDC Command : addNotify
+dismissDialog("Validate XDC Command"); // bz (bs)
+dismissDialog("Edit Create Clock"); // bs (cs)
+// Elapsed time: 72 seconds
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a (a, cs)
+// bz (cs):  Apply All XDC Constraints : addNotify
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bz (cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 2); // m (l, cs)
+selectCodeEditor("staged_mac.vhd", 251, 465); // bP (w, cs)
+// Elapsed time: 122 seconds
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// am (cs): Save Project: addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// A (cs): Out of Date Design: addNotify
+dismissDialog("Save Project"); // am (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// F (cs): Save Constraints: addNotify
+dismissDialog("Out of Date Design"); // A (cs)
+selectButton(PAResourceItoN.ModifiedConstraintsWithoutTargetDialog_UPDATE, "Update"); // a (F)
+// bz (cs):  Save Constraints : addNotify
+dismissDialog("Save Constraints"); // F (cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_SAVE
+// Tcl Message: save_constraints -force 
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Save Constraints"); // bz (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Mon Oct 23 12:33:30 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 7 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 42 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Mon Oct 23 12:34:15 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 66 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,585 MB. GUI used memory: 125 MB. Current time: 10/23/23, 12:35:23 PM CDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 2,585 MB. GUI used memory: 125 MB. Current time: 10/23/23, 12:35:23 PM CDT
+// Tcl Message: refresh_design 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,574 MB. GUI used memory: 103 MB. Current time: 10/23/23, 12:35:24 PM CDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  1058 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8389.828 ; gain = 0.000 ; free physical = 14932 ; free virtual = 41212 
+// Tcl Message: INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8389.828 ; gain = 0.000 ; free physical = 14828 ; free virtual = 41108 
+// Tcl Message: Restored from archive | CPU: 0.010000 secs | Memory: 0.100815 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8389.828 ; gain = 0.000 ; free physical = 14828 ; free virtual = 41108 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// [Engine Memory]: 2,717 MB (+36440kb) [00:31:21]
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// [GUI Memory]: 197 MB (+2848kb) [00:31:21]
+// [Engine Memory]: 2,913 MB (+62827kb) [00:31:21]
+dismissDialog("Reloading"); // bz (cs)
+// Elapsed time: 34 seconds
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "20", 19); // e (be, f)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 20 
+// Tcl Message: [Mon Oct 23 12:36:09 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 7 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 42 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 20 
+// Tcl Message: [Mon Oct 23 12:36:54 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+// [GUI Memory]: 207 MB (+86kb) [00:32:50]
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 74 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,797 MB. GUI used memory: 133 MB. Current time: 10/23/23, 12:38:09 PM CDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 2,797 MB. GUI used memory: 134 MB. Current time: 10/23/23, 12:38:09 PM CDT
+// Tcl Message: refresh_design 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,705 MB. GUI used memory: 110 MB. Current time: 10/23/23, 12:38:10 PM CDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  1044 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8390.828 ; gain = 0.000 ; free physical = 14737 ; free virtual = 41017 
+// Tcl Message: INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8390.828 ; gain = 0.000 ; free physical = 14611 ; free virtual = 40891 
+// Tcl Message: Restored from archive | CPU: 0.010000 secs | Memory: 0.100792 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8390.828 ; gain = 0.000 ; free physical = 14611 ; free virtual = 40891 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Reloading"); // bz (cs)
+// Elapsed time: 387 seconds
+selectCodeEditor("staged_mac.vhd", 371, 374); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Timing Constraints", 3); // m (l, cs)
+// Elapsed time: 57 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 2); // m (l, cs)
+selectCodeEditor("staged_mac.vhd", 420, 508); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("staged_mac.vhd", 479, 319); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 361, 362); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 418 seconds
+selectCodeEditor("staged_mac.vhd", 575, 430); // bP (w, cs)
+// Elapsed time: 227 seconds
+selectCodeEditor("staged_mac.vhd", 321, 305); // bP (w, cs)
+// Elapsed time: 47 seconds
+selectCodeEditor("staged_mac.vhd", 624, 325); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 200, 330); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("staged_mac.vhd", 169, 553); // bP (w, cs)
+// Elapsed time: 20 seconds
+selectCodeEditor("staged_mac.vhd", 175, 396); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,868 MB. GUI used memory: 143 MB. Current time: 10/23/23, 12:58:23 PM CDT
+// Elapsed time: 104 seconds
+selectCodeEditor("staged_mac.vhd", 423, 403); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("staged_mac.vhd", 334, 370); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 138 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Edit Timing Constraints]", 21, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WINDOW
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (1), Clocks (1), Create Clock (1)]", 1, false); // bk (J, cs)
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (1), Clocks (1), Create Clock (1)]", 1, false, false, false, false, false, true); // bk (J, cs) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_XDC_CREATE_CLOCK
+// bl (cs): Create Clock: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (bl)
+// bz (bl):  Validate XDC Command : addNotify
+// Tcl Message: ERROR: [Constraints 18-429] create_clock: name or pin(s)/port(s) list must be specified. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Constraints 18-429] create_clock: name or pin(s)/port(s) list must be specified.  
+// CommandFailedException: null
+// e (cs): Validate XDC Command: addNotify
+selectButton(PAResourceAtoD.CmdMsgTreeDialog_OK, "OK"); // a (e)
+dismissDialog("Validate XDC Command"); // e (cs)
+// 'e' command handler elapsed time: 7 seconds
+dismissDialog("Create Clock"); // bl (cs)
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ; main ; 5.0 ; 0.0 ; 2.5 ; false ; [get_ports ACLK] ; /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc ;  ; ", 0, "5.0", 2); // f (J, cs)
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ; main ; 5.0 ; 0.0 ; 2.5 ; false ; [get_ports ACLK] ; /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc ;  ; ", 0, "5.0", 2, false, false, false, false, true); // f (J, cs) - Double Click
+// bs (cs): Edit Create Clock: addNotify
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "6.0"); // b (E, bs)
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "7.0"); // b (E, bs)
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "8.0"); // b (E, bs)
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "9.0"); // b (E, bs)
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "10.0"); // b (E, bs)
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "9.0"); // b (E, bs)
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "8.0"); // b (E, bs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (bs)
+// bz (bs):  Validate XDC Command : addNotify
+dismissDialog("Validate XDC Command"); // bz (bs)
+dismissDialog("Edit Create Clock"); // bs (cs)
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a (a, cs)
+// bz (cs):  Apply All XDC Constraints : addNotify
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bz (cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// am (cs): Save Project: addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// A (cs): Out of Date Design: addNotify
+dismissDialog("Save Project"); // am (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// F (cs): Save Constraints: addNotify
+dismissDialog("Out of Date Design"); // A (cs)
+selectButton(PAResourceItoN.ModifiedConstraintsWithoutTargetDialog_UPDATE, "Update"); // a (F)
+// bz (cs):  Save Constraints : addNotify
+dismissDialog("Save Constraints"); // F (cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_SAVE
+// Tcl Message: save_constraints -force 
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Save Constraints"); // bz (cs)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 20 
+// Tcl Message: [Mon Oct 23 13:03:06 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 7 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 41 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 20 
+// Tcl Message: [Mon Oct 23 13:03:50 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 35 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,882 MB. GUI used memory: 137 MB. Current time: 10/23/23, 1:04:26 PM CDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 2,882 MB. GUI used memory: 138 MB. Current time: 10/23/23, 1:04:26 PM CDT
+// Tcl Message: refresh_design 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,799 MB. GUI used memory: 114 MB. Current time: 10/23/23, 1:04:27 PM CDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  1003 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8400.832 ; gain = 0.000 ; free physical = 12998 ; free virtual = 39366 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8400.832 ; gain = 0.000 ; free physical = 12911 ; free virtual = 39278 
+// Tcl Message: Restored from archive | CPU: 0.020000 secs | Memory: 0.693260 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8400.832 ; gain = 0.000 ; free physical = 12911 ; free virtual = 39278 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Reloading"); // bz (cs)
+// [GUI Memory]: 220 MB (+2497kb) [01:00:29]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u (J, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // m (l, cs)
+// Device view-level: 0.0
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3444722, 2116655); // E (F, cs)
+// Device view-level: 0.4
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3162977, 2168899); // E (F, cs)
+// Device view-level: 0.5
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3424585, 2547911); // E (F, cs)
+// Device view-level: 0.7
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3801413, 2702823); // E (F, cs)
+// Device view-level: 1.0
+// [GUI Memory]: 236 MB (+5979kb) [01:00:42]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,972 MB. GUI used memory: 159 MB. Current time: 10/23/23, 1:04:46 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3916724, 2891230); // E (F, cs)
+// Device view-level: 1.3
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4114648, 2975270); // E (F, cs)
+// Device view-level: 1.6
+// RouteApi::getRouteInfo length(bytes): 329273
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4103755, 3046698); // E (F, cs)
+// Device view-level: 2.1
+// RouteApi::getRouteInfo length(bytes): 162865
+// RouteApi::getRouteInfo length(bytes): 161296
+// RouteApi::getRouteInfo length(bytes): 148420
+// HMemoryUtils.trashcanNow. Engine heap size: 2,974 MB. GUI used memory: 164 MB. Current time: 10/23/23, 1:04:52 PM CDT
+// RouteApi::getRouteInfo length(bytes): 141203
+// RouteApi::getRouteInfo length(bytes): 122531
+// Device view-level: 1.9
+// RouteApi::getRouteInfo length(bytes): 131087
+// Device view-level: 1.7
+// RouteApi::getRouteInfo length(bytes): 168855
+// Device view-level: 1.4
+// RouteApi::getRouteInfo length(bytes): 265250
+// HMemoryUtils.trashcanNow. Engine heap size: 2,974 MB. GUI used memory: 234 MB. Current time: 10/23/23, 1:04:52 PM CDT
+// Device view-level: 1.2
+// RouteApi::getRouteInfo length(bytes): 395502
+// Device view-level: 1.0
+// Device view-level: 0.8
+// Device view-level: 0.6
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4138144, 2862897); // E (F, cs)
+// Device view-level: 1.3
+// [GUI Memory]: 253 MB (+5122kb) [01:00:50]
+// RouteApi::getRouteInfo length(bytes): 512537
+// HMemoryUtils.trashcanNow. Engine heap size: 2,975 MB. GUI used memory: 198 MB. Current time: 10/23/23, 1:04:54 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4282255, 2953746); // E (F, cs)
+// Device view-level: 1.9
+// RouteApi::getRouteInfo length(bytes): 173365
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4260388, 2991902); // E (F, cs)
+// Device view-level: 2.4
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4266468, 3013930); // E (F, cs)
+// Device view-level: 3.3
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4273623, 3018335); // E (F, cs)
+// Device view-level: 3.8
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4277632, 3019507); // E (F, cs)
+// Device view-level: 4.4
+// HMemoryUtils.trashcanNow. Engine heap size: 2,977 MB. GUI used memory: 165 MB. Current time: 10/23/23, 1:05:02 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4277426, 3020066); // E (F, cs)
+// Device view-level: 5.0
+// Device view-level: 4.8
+// Device view-level: 4.5
+// Device view-level: 4.3
+// Device view-level: 4.1
+// HMemoryUtils.trashcanNow. Engine heap size: 2,977 MB. GUI used memory: 196 MB. Current time: 10/23/23, 1:05:06 PM CDT
+// Device view-level: 3.9
+// Device view-level: 3.7
+// Device view-level: 3.4
+// Device view-level: 3.2
+// Device view-level: 3.0
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 162 MB. Current time: 10/23/23, 1:05:07 PM CDT
+// Device view-level: 2.8
+// Device view-level: 2.5
+// Device view-level: 2.3
+// Device view-level: 2.1
+// RouteApi::getRouteInfo length(bytes): 105539
+// Device view-level: 1.7
+// RouteApi::getRouteInfo length(bytes): 316973
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 226 MB. Current time: 10/23/23, 1:05:07 PM CDT
+// Device view-level: 1.4
+// [Engine Memory]: 3,084 MB (+26631kb) [01:01:03]
+// RouteApi::getRouteInfo length(bytes): 458865
+// Device view-level: 1.2
+// RouteApi::getRouteInfo length(bytes): 544598
+// Device view-level: 1.0
+// Device view-level: 0.8
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 2,996 MB. GUI used memory: 164 MB. Current time: 10/23/23, 1:05:08 PM CDT
+// Device view-level: 0.3
+// Device view-level: 0.1
+// Elapsed time: 34 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 2); // m (l, cs)
+// Elapsed time: 1122 seconds
+selectCodeEditor("staged_mac.vhd", 259, 99); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,985 MB. GUI used memory: 161 MB. Current time: 10/23/23, 1:35:08 PM CDT

@@ -1,0 +1,1841 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:35 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 27475
+License: Customer
+
+Current time: 	Wed Oct 18 21:30:25 CDT 2023
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Red Hat Enterprise Linux release 8.8 (Ootpa)
+OS Version: 4.18.0-477.15.1.el8_8.x86_64
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :101
+Screen size: 1920x968
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/remote/Xilinx/2020.1/Vivado/2020.1/tps/lnx64/jre9.0.4
+Java executable location: 	/remote/Xilinx/2020.1/Vivado/2020.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	tjfriedl
+User home directory: /home/tjfriedl
+User working directory: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /remote/Xilinx/2020.1/Vivado
+HDI_APPROOT: /remote/Xilinx/2020.1/Vivado/2020.1
+RDI_DATADIR: /remote/Xilinx/2020.1/Vivado/2020.1/data
+RDI_BINDIR: /remote/Xilinx/2020.1/Vivado/2020.1/bin
+
+Vivado preferences file location: /home/tjfriedl/.Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: /home/tjfriedl/.Xilinx/Vivado/2020.1/
+Vivado layouts directory: /home/tjfriedl/.Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	/remote/Xilinx/2020.1/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/vivado.log
+Vivado journal file location: 	/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-27475-linuxvdi-43.ece.iastate.edu
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /remote/Xilinx/2020.1/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: /remote/Xilinx/2020.1/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: /remote/Xilinx/2020.1/Vivado/2020.1
+XILINX_SDK: /remote/Xilinx/2020.1/Vitis/2020.1
+XILINX_VITIS: /remote/Xilinx/2020.1/Vitis/2020.1
+XILINX_VIVADO: /remote/Xilinx/2020.1/Vivado/2020.1
+XILINX_VIVADO_HLS: /remote/Xilinx/2020.1/Vivado/2020.1
+
+
+GUI allocated memory:	192 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,321 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,321 MB. GUI used memory: 58 MB. Current time: 10/18/23, 9:30:27 PM CDT
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // af (cs)
+selectMenuItem(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr"); // ai (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+// [GUI Memory]: 115 MB (+117981kb) [00:04:07]
+// [Engine Memory]: 1,325 MB (+1238198kb) [00:04:07]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 124 MB (+3824kb) [00:04:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  3025 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 7217.586 ; gain = 38.395 ; free physical = 9766 ; free virtual = 21264 
+// Project name: tc_staged_mac; location: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac; part: xc7z020clg484-1
+// Elapsed time: 10 seconds
+dismissDialog("Open Project"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,374 MB. GUI used memory: 75 MB. Current time: 10/18/23, 9:34:32 PM CDT
+// [Engine Memory]: 1,397 MB (+5225kb) [00:04:19]
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (F, cs)
+// [GUI Memory]: 133 MB (+2334kb) [00:04:28]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, staged_mac(behavioral) (staged_mac.vhd)]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, staged_mac(behavioral) (staged_mac.vhd)]", 6, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, staged_mac(behavioral) (staged_mac.vhd)]", 6, false); // B (F, cs)
+// Elapsed time: 13 seconds
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,457 MB. GUI used memory: 77 MB. Current time: 10/18/23, 9:34:57 PM CDT
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+// 'k' command handler elapsed time: 15 seconds
+// Elapsed time: 10 seconds
+dismissDialog("Launch Runs"); // f (cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cs):  Resetting Runs : addNotify
+// f (cs): Launch Runs: addNotify
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "4", 3); // e (be, f)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Wed Oct 18 21:35:20 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 7 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// [Engine Memory]: 1,467 MB (+428kb) [00:05:51]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 124 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 21:37:27 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 113 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,499 MB. GUI used memory: 80 MB. Current time: 10/18/23, 9:39:32 PM CDT
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,029 MB. GUI used memory: 80 MB. Current time: 10/18/23, 9:39:43 PM CDT
+// [Engine Memory]: 2,029 MB (+512635kb) [00:09:29]
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: /remote/Xilinx/2020.1/Vivado/2020.1/data/parts/xilinx/zynq/devint/zynq/xc7z020/xc7z020.xgd; ZipEntry: xc7z020_detail.xgd elapsed time: 0.8s
+// [GUI Memory]: 143 MB (+3937kb) [00:09:30]
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 0.9s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 2,179 MB (+50656kb) [00:09:31]
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  2026 ms.
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg484-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7291.609 ; gain = 0.000 ; free physical = 9336 ; free virtual = 20939 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 7819.254 ; gain = 0.000 ; free physical = 8824 ; free virtual = 20426 
+// Tcl Message: Restored from archive | CPU: 0.050000 secs | Memory: 0.323242 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 7819.254 ; gain = 0.000 ; free physical = 8824 ; free virtual = 20426 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7819.254 ; gain = 0.000 ; free physical = 8824 ; free virtual = 20427 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// TclEventType: CURR_DESIGN_SET
+// [GUI Memory]: 153 MB (+2697kb) [00:09:32]
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 8016.578 ; gain = 752.719 ; free physical = 8710 ; free virtual = 20316 
+// Device view-level: 0.0
+// TclEventType: DRC_ADDED
+// [GUI Memory]: 166 MB (+5350kb) [00:09:33]
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dZ' command handler elapsed time: 27 seconds
+// Elapsed time: 27 seconds
+dismissDialog("Open Implemented Design"); // bz (cs)
+// [GUI Memory]: 179 MB (+5613kb) [00:09:43]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 2); // m (l, cs)
+selectCodeEditor("staged_mac.vhd", 146, 208); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 149, 194); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 147, 210); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 147, 210, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("staged_mac.vhd", 94, 173); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 142, 199); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 121, 196); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 132, 201); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("staged_mac.vhd", 127, 91); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 127, 113); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 127, 113, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("staged_mac.vhd", 127, 127); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 158, 185); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+// 'k' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // f (cs)
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cs)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,192 MB. GUI used memory: 109 MB. Current time: 10/18/23, 9:41:01 PM CDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 2,192 MB. GUI used memory: 109 MB. Current time: 10/18/23, 9:41:01 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1506 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// bz (cs):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bz (cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cs):  Resetting Runs : addNotify
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 21:41:07 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 103 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 21:42:55 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 97 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,182 MB. GUI used memory: 87 MB. Current time: 10/18/23, 9:44:35 PM CDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8016.578 ; gain = 0.000 ; free physical = 8838 ; free virtual = 20445 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 8016.578 ; gain = 0.000 ; free physical = 8739 ; free virtual = 20347 
+// Tcl Message: Restored from archive | CPU: 0.060000 secs | Memory: 0.740898 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 8016.578 ; gain = 0.000 ; free physical = 8739 ; free virtual = 20347 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8016.578 ; gain = 0.000 ; free physical = 8739 ; free virtual = 20347 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dZ' command handler elapsed time: 5 seconds
+// V (cs): Critical Messages: addNotify
+dismissDialog("Open Implemented Design"); // bz (cs)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (V)
+dismissDialog("Critical Messages"); // V (cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 2); // m (l, cs)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 2, false, true); // m (l, cs) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // F (aI, cs)
+typeControlKey(null, null, 'z');
+selectCodeEditor("staged_mac.vhd", 314, 197); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,252 MB. GUI used memory: 125 MB. Current time: 10/18/23, 9:45:02 PM CDT
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("staged_mac.vhd", 282, 145); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 282, 145, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("staged_mac.vhd", 282, 145); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 28 seconds
+selectCodeEditor("staged_mac.vhd", 128, 223); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("staged_mac.vhd", 274, 426); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,277 MB. GUI used memory: 125 MB. Current time: 10/18/23, 9:45:47 PM CDT
+selectCodeEditor("staged_mac.vhd", 281, 425); // bP (w, cs)
+// Elapsed time: 20 seconds
+selectCodeEditor("staged_mac.vhd", 376, 428); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 173, 469); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 127, 427); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+selectButton("OptionPane.button", "OK"); // JButton (v, C)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// [Engine Memory]: 2,293 MB (+5435kb) [00:16:21]
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 21:46:37 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 37 seconds
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cs)
+// TclEventType: DESIGN_CLOSE
+// TclEventType: TIMING_RESULTS_UNLOAD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,294 MB. GUI used memory: 90 MB. Current time: 10/18/23, 9:47:17 PM CDT
+// Engine heap size: 2,294 MB. GUI used memory: 91 MB. Current time: 10/18/23, 9:47:17 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1458 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// bz (cs):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bz (cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 87 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 21:48:47 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 98 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,288 MB. GUI used memory: 92 MB. Current time: 10/18/23, 9:50:27 PM CDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8030.445 ; gain = 0.000 ; free physical = 8744 ; free virtual = 20352 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 8030.445 ; gain = 0.000 ; free physical = 8652 ; free virtual = 20259 
+// Tcl Message: Restored from archive | CPU: 0.050000 secs | Memory: 0.726875 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 8030.445 ; gain = 0.000 ; free physical = 8652 ; free virtual = 20259 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8030.445 ; gain = 0.000 ; free physical = 8652 ; free virtual = 20259 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dZ' command handler elapsed time: 4 seconds
+// V (cs): Critical Messages: addNotify
+dismissDialog("Open Implemented Design"); // bz (cs)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (V)
+dismissDialog("Critical Messages"); // V (cs)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 56328, 3696700); // E (F, cs)
+// Device view-level: 1.3
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 207206, 3866169); // E (F, cs)
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 2,307 MB. GUI used memory: 160 MB. Current time: 10/18/23, 9:50:42 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 225489, 3563941); // E (F, cs)
+// Device view-level: 1.7
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 206578, 3684343); // E (F, cs)
+// Device view-level: 2.0
+// HMemoryUtils.trashcanNow. Engine heap size: 2,308 MB. GUI used memory: 132 MB. Current time: 10/18/23, 9:50:45 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 230939, 3731005); // E (F, cs)
+// Device view-level: 2.3
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 231639, 3745133); // E (F, cs)
+// Device view-level: 2.6
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 246682, 3762296); // E (F, cs)
+// Device view-level: 2.9
+// [Engine Memory]: 2,413 MB (+5582kb) [00:20:34]
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 251302, 3766580); // E (F, cs)
+// Device view-level: 3.2
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 254480, 3769543); // E (F, cs)
+// Device view-level: 3.7
+// HMemoryUtils.trashcanNow. Engine heap size: 2,413 MB. GUI used memory: 185 MB. Current time: 10/18/23, 9:50:49 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,413 MB. GUI used memory: 138 MB. Current time: 10/18/23, 9:50:51 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,413 MB. GUI used memory: 132 MB. Current time: 10/18/23, 9:50:52 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,414 MB. GUI used memory: 132 MB. Current time: 10/18/23, 9:50:52 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,414 MB. GUI used memory: 139 MB. Current time: 10/18/23, 9:50:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,414 MB. GUI used memory: 133 MB. Current time: 10/18/23, 9:51:00 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,414 MB. GUI used memory: 133 MB. Current time: 10/18/23, 9:51:01 PM CDT
+// Device view-level: 3.2
+// Device view-level: 3.0
+// Device view-level: 2.8
+// Device view-level: 3.0
+// HMemoryUtils.trashcanNow. Engine heap size: 2,414 MB. GUI used memory: 133 MB. Current time: 10/18/23, 9:51:02 PM CDT
+// Device view-level: 1.9
+// Device view-level: 1.7
+// Device view-level: 1.4
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 2,414 MB. GUI used memory: 135 MB. Current time: 10/18/23, 9:51:03 PM CDT
+// Device view-level: 0.6
+// Device view-level: 0.3
+// HMemoryUtils.trashcanNow. Engine heap size: 2,415 MB. GUI used memory: 134 MB. Current time: 10/18/23, 9:51:05 PM CDT
+// Device view-level: 0.6
+// Device view-level: 0.8
+// HMemoryUtils.trashcanNow. Engine heap size: 2,415 MB. GUI used memory: 134 MB. Current time: 10/18/23, 9:51:07 PM CDT
+// Device view-level: 0.6
+// Device view-level: 0.1
+// Device view-level: 0.3
+// HMemoryUtils.trashcanNow. Engine heap size: 2,415 MB. GUI used memory: 135 MB. Current time: 10/18/23, 9:51:09 PM CDT
+// Device view-level: 1.0
+// Device view-level: 1.2
+// Device view-level: 1.4
+// Device view-level: 1.7
+// Device view-level: 1.9
+// HMemoryUtils.trashcanNow. Engine heap size: 2,415 MB. GUI used memory: 134 MB. Current time: 10/18/23, 9:51:09 PM CDT
+// Device view-level: 1.7
+// Device view-level: 1.4
+// Device view-level: 1.2
+// Device view-level: 1.0
+// Device view-level: 0.8
+// HMemoryUtils.trashcanNow. Engine heap size: 2,415 MB. GUI used memory: 134 MB. Current time: 10/18/23, 9:51:10 PM CDT
+// Device view-level: 0.6
+// Device view-level: 0.3
+// Device view-level: 0.6
+// Device view-level: 0.8
+// Device view-level: 1.0
+// HMemoryUtils.trashcanNow. Engine heap size: 2,415 MB. GUI used memory: 186 MB. Current time: 10/18/23, 9:51:12 PM CDT
+// Device view-level: 1.2
+// Device view-level: 1.4
+// HMemoryUtils.trashcanNow. Engine heap size: 2,415 MB. GUI used memory: 139 MB. Current time: 10/18/23, 9:51:15 PM CDT
+// Device view-level: 1.7
+// Device view-level: 2.1
+// Device view-level: 2.3
+// Device view-level: 2.5
+// Device view-level: 2.8
+// HMemoryUtils.trashcanNow. Engine heap size: 2,416 MB. GUI used memory: 135 MB. Current time: 10/18/23, 9:51:15 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,416 MB. GUI used memory: 135 MB. Current time: 10/18/23, 9:51:16 PM CDT
+// Device view-level: 3.0
+// Device view-level: 3.2
+// Device view-level: 3.4
+// Device view-level: 3.7
+// HMemoryUtils.trashcanNow. Engine heap size: 2,416 MB. GUI used memory: 142 MB. Current time: 10/18/23, 9:51:20 PM CDT
+// Device view-level: 3.9
+// Device view-level: 3.7
+// Device view-level: 3.2
+// Device view-level: 3.0
+// Device view-level: 2.8
+// HMemoryUtils.trashcanNow. Engine heap size: 2,416 MB. GUI used memory: 137 MB. Current time: 10/18/23, 9:51:22 PM CDT
+// Device view-level: 2.5
+// Device view-level: 2.3
+// Device view-level: 0.8
+// Device view-level: 0.6
+// Device view-level: 0.0
+// HMemoryUtils.trashcanNow. Engine heap size: 2,416 MB. GUI used memory: 150 MB. Current time: 10/18/23, 9:51:22 PM CDT
+// Device view-level: 0.2
+// Device view-level: 0.7
+// [GUI Memory]: 188 MB (+3kb) [00:21:10]
+// Device view-level: 0.9
+// Device view-level: 1.1
+// [GUI Memory]: 199 MB (+1113kb) [00:21:10]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,416 MB. GUI used memory: 137 MB. Current time: 10/18/23, 9:51:24 PM CDT
+// Device view-level: 0.9
+// Device view-level: 0.4
+// HMemoryUtils.trashcanNow. Engine heap size: 2,416 MB. GUI used memory: 141 MB. Current time: 10/18/23, 9:51:26 PM CDT
+// Device view-level: 0.0
+// Device view-level: 0.0
+// Device view-level: 0.2
+// HMemoryUtils.trashcanNow. Engine heap size: 2,417 MB. GUI used memory: 159 MB. Current time: 10/18/23, 9:51:27 PM CDT
+// Device view-level: 0.4
+// Device view-level: 0.7
+// Device view-level: 0.9
+// Device view-level: 1.1
+// Device view-level: 1.3
+// RouteApi::getRouteInfo length(bytes): 436783
+// HMemoryUtils.trashcanNow. Engine heap size: 2,417 MB. GUI used memory: 142 MB. Current time: 10/18/23, 9:51:28 PM CDT
+// Device view-level: 2.0
+// RouteApi::getRouteInfo length(bytes): 220261
+// Device view-level: 2.2
+// RouteApi::getRouteInfo length(bytes): 208302
+// Device view-level: 2.4
+// RouteApi::getRouteInfo length(bytes): 122904
+// Device view-level: 2.7
+// HMemoryUtils.trashcanNow. Engine heap size: 2,417 MB. GUI used memory: 137 MB. Current time: 10/18/23, 9:51:29 PM CDT
+// Device view-level: 2.9
+// Device view-level: 3.1
+// Device view-level: 3.3
+// Device view-level: 3.5
+// Device view-level: 3.3
+// HMemoryUtils.trashcanNow. Engine heap size: 2,455 MB. GUI used memory: 161 MB. Current time: 10/18/23, 9:51:31 PM CDT
+// Device view-level: 2.7
+// RouteApi::getRouteInfo length(bytes): 116323
+// Device view-level: 2.4
+// RouteApi::getRouteInfo length(bytes): 122904
+// Device view-level: 2.2
+// RouteApi::getRouteInfo length(bytes): 162259
+// Device view-level: 1.3
+// [GUI Memory]: 209 MB (+471kb) [00:21:18]
+// RouteApi::getRouteInfo length(bytes): 497193
+// [GUI Memory]: 220 MB (+12kb) [00:21:18]
+// Device view-level: 1.1
+// HMemoryUtils.trashcanNow. Engine heap size: 2,472 MB. GUI used memory: 164 MB. Current time: 10/18/23, 9:51:32 PM CDT
+// [Engine Memory]: 2,551 MB (+17776kb) [00:21:18]
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 2,556 MB. GUI used memory: 200 MB. Current time: 10/18/23, 9:52:22 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,556 MB. GUI used memory: 138 MB. Current time: 10/18/23, 9:52:23 PM CDT
+// Elapsed time: 95 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3935923, 1789421); // E (F, cs)
+// Device view-level: 1.1
+// HMemoryUtils.trashcanNow. Engine heap size: 2,556 MB. GUI used memory: 150 MB. Current time: 10/18/23, 9:52:26 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3997403, 1933799); // E (F, cs)
+// Device view-level: 1.3
+// RouteApi::getRouteInfo length(bytes): 577133
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3995877, 2000289); // E (F, cs)
+// Device view-level: 1.5
+// RouteApi::getRouteInfo length(bytes): 452436
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3998351, 2044322); // E (F, cs)
+// Device view-level: 1.9
+// RouteApi::getRouteInfo length(bytes): 292476
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4025618, 2060717); // E (F, cs)
+// Device view-level: 2.1
+// RouteApi::getRouteInfo length(bytes): 251956
+// RouteApi::getRouteInfo length(bytes): 184280
+// HMemoryUtils.trashcanNow. Engine heap size: 2,556 MB. GUI used memory: 145 MB. Current time: 10/18/23, 9:52:34 PM CDT
+// RouteApi::getRouteInfo length(bytes): 149078
+// RouteApi::getRouteInfo length(bytes): 166475
+// RouteApi::getRouteInfo length(bytes): 177079
+// RouteApi::getRouteInfo length(bytes): 184280
+// Device view-level: 1.9
+// RouteApi::getRouteInfo length(bytes): 288644
+// HMemoryUtils.trashcanNow. Engine heap size: 2,556 MB. GUI used memory: 142 MB. Current time: 10/18/23, 9:52:36 PM CDT
+// Device view-level: 1.2
+// Device view-level: 1.0
+// Device view-level: 0.8
+// Device view-level: 0.3
+closeView(PAResourceOtoP.PAViews_DEVICE, "Device"); // U
+selectCodeEditor("staged_mac.vhd", 551, 185); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 21:53:04 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 53 seconds
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cs)
+// TclEventType: DESIGN_CLOSE
+// TclEventType: TIMING_RESULTS_UNLOAD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,448 MB. GUI used memory: 102 MB. Current time: 10/18/23, 9:54:00 PM CDT
+// Engine heap size: 2,448 MB. GUI used memory: 102 MB. Current time: 10/18/23, 9:54:00 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1246 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// bz (cs):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bz (cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 46 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 21:54:52 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 94 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,439 MB. GUI used memory: 101 MB. Current time: 10/18/23, 9:56:28 PM CDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8093.664 ; gain = 0.000 ; free physical = 7027 ; free virtual = 18635 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 8093.664 ; gain = 0.000 ; free physical = 6940 ; free virtual = 18548 
+// Tcl Message: Restored from archive | CPU: 0.060000 secs | Memory: 0.730171 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 8093.664 ; gain = 0.000 ; free physical = 6940 ; free virtual = 18548 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8093.664 ; gain = 0.000 ; free physical = 6940 ; free virtual = 18548 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dZ' command handler elapsed time: 4 seconds
+// V (cs): Critical Messages: addNotify
+dismissDialog("Open Implemented Design"); // bz (cs)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (V)
+dismissDialog("Critical Messages"); // V (cs)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3773340, 1614767); // E (F, cs)
+// Device view-level: 0.6
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 2547269, 2583801); // E (F, cs)
+// Device view-level: 0.1
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 116433, 3312778); // E (F, cs)
+// Device view-level: 0.7
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 244359, 3548635); // E (F, cs)
+// Device view-level: 1.1
+// HMemoryUtils.trashcanNow. Engine heap size: 2,455 MB. GUI used memory: 142 MB. Current time: 10/18/23, 9:56:38 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 195567, 3726910); // E (F, cs)
+// Device view-level: 1.6
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 216991, 3790439); // E (F, cs)
+// Device view-level: 1.9
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 236066, 3841052); // E (F, cs)
+// Device view-level: 2.1
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 240568, 3867397); // E (F, cs)
+// Device view-level: 2.3
+// Device view-level: 2.1
+// HMemoryUtils.trashcanNow. Engine heap size: 2,530 MB. GUI used memory: 153 MB. Current time: 10/18/23, 9:56:46 PM CDT
+// Device view-level: 1.9
+// Device view-level: 1.7
+// Device view-level: 1.4
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 2,531 MB. GUI used memory: 192 MB. Current time: 10/18/23, 9:56:46 PM CDT
+// Device view-level: 1.0
+// Device view-level: 0.8
+// Device view-level: 0.6
+// Device view-level: 0.0
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3844430, 1756948); // E (F, cs)
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 2,531 MB. GUI used memory: 146 MB. Current time: 10/18/23, 9:56:48 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3632419, 1825174); // E (F, cs)
+// Device view-level: 1.1
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3875632, 1907961); // E (F, cs)
+// Device view-level: 1.2
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3869962, 1995563); // E (F, cs)
+// Device view-level: 1.4
+// RouteApi::getRouteInfo length(bytes): 576895
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3917539, 2069809); // E (F, cs)
+// Device view-level: 1.7
+// RouteApi::getRouteInfo length(bytes): 397333
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 4013414, 2131599); // E (F, cs)
+// Device view-level: 2.0
+// RouteApi::getRouteInfo length(bytes): 196195
+// HMemoryUtils.trashcanNow. Engine heap size: 2,640 MB. GUI used memory: 199 MB. Current time: 10/18/23, 9:56:53 PM CDT
+// Device view-level: 1.8
+// RouteApi::getRouteInfo length(bytes): 313206
+// Device view-level: 0.9
+// Device view-level: 0.7
+// Device view-level: 0.2
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 80239, 3193611); // E (F, cs)
+// Device view-level: 1.1
+// HMemoryUtils.trashcanNow. Engine heap size: 2,606 MB. GUI used memory: 145 MB. Current time: 10/18/23, 9:56:56 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 311695, 3575838); // E (F, cs)
+// Device select: 'Tile - L_TERM_INT_X2Y19'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 257, 2904, 1233, 456); // U (m, cs)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 226350, 3283933); // E (F, cs)
+// Device view-level: 1.9
+// Device view-level: 2.1
+// Device view-level: 2.4
+// Device view-level: 2.8
+// HMemoryUtils.trashcanNow. Engine heap size: 2,607 MB. GUI used memory: 162 MB. Current time: 10/18/23, 9:56:59 PM CDT
+// Device view-level: 3.0
+// Device view-level: 3.2
+// Device view-level: 3.5
+// Device view-level: 3.7
+// Device view-level: 3.5
+// HMemoryUtils.trashcanNow. Engine heap size: 2,607 MB. GUI used memory: 148 MB. Current time: 10/18/23, 9:57:02 PM CDT
+// Device view-level: 2.8
+// Device view-level: 2.6
+// Device view-level: 2.4
+// Device view-level: 3.0
+// Device view-level: 2.8
+// HMemoryUtils.trashcanNow. Engine heap size: 2,607 MB. GUI used memory: 174 MB. Current time: 10/18/23, 9:57:03 PM CDT
+// Device view-level: 2.6
+// HMemoryUtils.trashcanNow. Engine heap size: 2,607 MB. GUI used memory: 149 MB. Current time: 10/18/23, 9:57:04 PM CDT
+// Device view-level: 1.7
+// Device view-level: 1.0
+// Device view-level: 0.8
+// Device view-level: 0.6
+// Device view-level: 0.4
+// HMemoryUtils.trashcanNow. Engine heap size: 2,607 MB. GUI used memory: 150 MB. Current time: 10/18/23, 9:57:06 PM CDT
+// Device view-level: 0.0
+// Device view-level: 0.2
+// Device view-level: 0.7
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 2,607 MB. GUI used memory: 148 MB. Current time: 10/18/23, 9:57:08 PM CDT
+// Device view-level: 1.1
+// Device view-level: 0.9
+// Device view-level: 0.7
+// Device view-level: 0.4
+// Elapsed time: 11 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 3790830, 1733251); // E (F, cs)
+// Device view-level: 1.1
+// HMemoryUtils.trashcanNow. Engine heap size: 2,607 MB. GUI used memory: 154 MB. Current time: 10/18/23, 9:57:10 PM CDT
+closeView(PAResourceOtoP.PAViews_DEVICE, "Device"); // U
+// Elapsed time: 73 seconds
+selectCodeEditor("staged_mac.vhd", 533, 159); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("staged_mac.vhd", 652, 155); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("staged_mac.vhd", 627, 23); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,619 MB. GUI used memory: 141 MB. Current time: 10/18/23, 9:58:33 PM CDT
+typeControlKey((HResource) null, "staged_mac.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 351, 141); // bP (w, cs)
+typeControlKey((HResource) null, "staged_mac.vhd", 'c'); // bP (w, cs)
+// Elapsed time: 23 seconds
+selectCodeEditor("staged_mac.vhd", 282, 128); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("staged_mac.vhd", 103, 162); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 103, 162, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "staged_mac.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 779, 73); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 779, 73, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "staged_mac.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 192, 91); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("staged_mac.vhd", 107, 113); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 290, 178); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,648 MB. GUI used memory: 140 MB. Current time: 10/18/23, 9:59:53 PM CDT
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 1); // m (l, cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 22:00:10 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cs)
+// TclEventType: DESIGN_CLOSE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: TIMING_RESULTS_UNLOAD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,544 MB. GUI used memory: 110 MB. Current time: 10/18/23, 10:00:12 PM CDT
+// Engine heap size: 2,544 MB. GUI used memory: 110 MB. Current time: 10/18/23, 10:00:12 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1257 ms.
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1065 ms. Increasing delay to 3000 ms.
+// Tcl Message: close_design 
+// bz (cs):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bz (cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 76 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 22:01:30 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 101 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,537 MB. GUI used memory: 111 MB. Current time: 10/18/23, 10:03:14 PM CDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8162.699 ; gain = 0.000 ; free physical = 7739 ; free virtual = 19348 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 8162.699 ; gain = 0.000 ; free physical = 8506 ; free virtual = 20116 
+// Tcl Message: Restored from archive | CPU: 0.060000 secs | Memory: 0.697899 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 8162.699 ; gain = 0.000 ; free physical = 8506 ; free virtual = 20116 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8162.699 ; gain = 0.000 ; free physical = 8506 ; free virtual = 20116 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dZ' command handler elapsed time: 4 seconds
+// V (cs): Critical Messages: addNotify
+dismissDialog("Open Implemented Design"); // bz (cs)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (V)
+dismissDialog("Critical Messages"); // V (cs)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, -217878, 2935018); // E (F, cs)
+// Device view-level: 0.6
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 202923, 3227127); // E (F, cs)
+// Device view-level: 0.8
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 298448, 3485689); // E (F, cs)
+// Device view-level: 1.0
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 225969, 3817528); // E (F, cs)
+// Device view-level: 1.7
+// HMemoryUtils.trashcanNow. Engine heap size: 2,554 MB. GUI used memory: 150 MB. Current time: 10/18/23, 10:03:25 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 245734, 3871516); // E (F, cs)
+// Device view-level: 2.0
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 217853, 3889450); // E (F, cs)
+// Device view-level: 2.4
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 237620, 3892058); // E (F, cs)
+// Device view-level: 2.5
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 245627, 3898033); // E (F, cs)
+// Device view-level: 2.6
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 247739, 3917504); // E (F, cs)
+// Device view-level: 3.0
+// HMemoryUtils.trashcanNow. Engine heap size: 2,554 MB. GUI used memory: 152 MB. Current time: 10/18/23, 10:03:30 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 253035, 3918893); // E (F, cs)
+// Device view-level: 3.1
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 255247, 3919267); // E (F, cs)
+// Device view-level: 3.2
+closeView(PAResourceOtoP.PAViews_DEVICE, "Device"); // U
+selectCodeEditor("staged_mac.vhd", 268, 202); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m (l, cs)
+// Elapsed time: 66 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 1); // m (l, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("staged_mac.vhd", 406, 261); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("staged_mac.vhd", 315, 198); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 392, 199); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 392, 199, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("staged_mac.vhd", 391, 202); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 391, 202, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("staged_mac.vhd", 391, 202); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 379, 207); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 395, 198); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 395, 198, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("staged_mac.vhd", 391, 198); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,677 MB. GUI used memory: 146 MB. Current time: 10/18/23, 10:06:03 PM CDT
+// Elapsed time: 454 seconds
+selectCodeEditor("staged_mac.vhd", 178, 194); // bP (w, cs)
+// [Engine Memory]: 2,770 MB (+96641kb) [00:43:25]
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u (J, cs)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,771 MB. GUI used memory: 180 MB. Current time: 10/18/23, 10:13:43 PM CDT
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// A (cs): Synthesis is Out-of-date: addNotify
+// 'c' command handler elapsed time: 4 seconds
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false); // B (F, cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 22:14:16 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cs)
+// TclEventType: DESIGN_CLOSE
+// TclEventType: TIMING_RESULTS_UNLOAD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,613 MB. GUI used memory: 115 MB. Current time: 10/18/23, 10:14:28 PM CDT
+// Engine heap size: 2,613 MB. GUI used memory: 116 MB. Current time: 10/18/23, 10:14:28 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1347 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// bz (cs):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bz (cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("staged_mac.vhd", 258, 195); // bP (w, cs)
+// Elapsed time: 21 seconds
+selectCodeEditor("staged_mac.vhd", 225, 244); // bP (w, cs)
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Failed: addNotify
+dismissDialog("Synthesis Failed"); // ag (cs)
+selectCodeEditor("staged_mac.vhd", 375, 187); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 310, 190); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 205, 170); // bP (w, cs)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design ERROR ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Wed Oct 18 22:14:18 CDT 2023 ; 00:00:46 ; Vivado Synthesis Defaults (Vivado Synthesis 2020) ; Vivado Synthesis Default Reports (Vivado Synthesis 2020) ; xc7z020clg484-1 ; linuxvdi-43.ece.iastate.edu ; Vivado Synthesis Defaults", 0, "synth_1", 0, true); // az (J, cs) - Node
+// PAPropertyPanels.initPanels (synth_1) elapsed time: 0.3s
+collapseTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design ERROR ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Wed Oct 18 22:14:18 CDT 2023 ; 00:00:46 ; Vivado Synthesis Defaults (Vivado Synthesis 2020) ; Vivado Synthesis Default Reports (Vivado Synthesis 2020) ; xc7z020clg484-1 ; linuxvdi-43.ece.iastate.edu ; Vivado Synthesis Defaults", 0); // az (J, cs)
+expandTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design ERROR ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Wed Oct 18 22:14:18 CDT 2023 ; 00:00:46 ; Vivado Synthesis Defaults (Vivado Synthesis 2020) ; Vivado Synthesis Default Reports (Vivado Synthesis 2020) ; xc7z020clg484-1 ; linuxvdi-43.ece.iastate.edu ; Vivado Synthesis Defaults", 0); // az (J, cs)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design ERROR ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Wed Oct 18 22:14:18 CDT 2023 ; 00:00:46 ; Vivado Synthesis Defaults (Vivado Synthesis 2020) ; Vivado Synthesis Default Reports (Vivado Synthesis 2020) ; xc7z020clg484-1 ; linuxvdi-43.ece.iastate.edu ; Vivado Synthesis Defaults", 0, "synth_1", 0, true, false, false, false, false, true); // az (J, cs) - Double Click - Node
+// Elapsed time: 14 seconds
+selectCodeEditor("staged_mac.vhd", 202, 233); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("staged_mac.vhd", 596, 232); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 596, 232, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("staged_mac.vhd", 447, 236); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 599, 231); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("staged_mac.vhd", 632, 183); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 423, 234); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 423, 234, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("staged_mac.vhd", 468, 239); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 341, 211); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 354, 237); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 415, 237); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 680, 229); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 533, 230); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 534, 232); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 661, 226); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("staged_mac.vhd", 546, 194); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("staged_mac.vhd", 541, 172); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 343, 167); // bP (w, cs)
+typeControlKey(null, null, 'z');
+selectCodeEditor("staged_mac.vhd", 436, 191); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 22:17:59 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 27 seconds
+selectCodeEditor("staged_mac.vhd", 267, 73); // bP (w, cs)
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Failed: addNotify
+// Elapsed time: 34 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag (cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("staged_mac.vhd", 421, 206); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 421, 206, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 22:19:23 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 77 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 22:20:43 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 41 seconds
+selectCodeEditor("staged_mac.vhd", 186, 205); // bP (w, cs)
+// Elapsed time: 28 seconds
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, true); // g (aR, cs): TRUE
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, false); // g (aR, cs): FALSE
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aR, cs): FALSE
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, true); // g (aR, cs): TRUE
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aR, cs): FALSE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 23 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,647 MB. GUI used memory: 115 MB. Current time: 10/18/23, 10:22:24 PM CDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// PAPropertyPanels.initPanels (synth_1) elapsed time: 0.2s
+// WARNING: HEventQueue.dispatchEvent() is taking  1045 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8223.727 ; gain = 0.000 ; free physical = 8606 ; free virtual = 20218 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 8244.734 ; gain = 0.000 ; free physical = 8537 ; free virtual = 20148 
+// Tcl Message: Restored from archive | CPU: 0.070000 secs | Memory: 0.726555 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 8244.734 ; gain = 0.000 ; free physical = 8537 ; free virtual = 20148 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8244.734 ; gain = 0.000 ; free physical = 8537 ; free virtual = 20148 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bz)
+// TclEventType: DRC_ADDED
+// 'dZ' command handler elapsed time: 4 seconds
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// V (cs): Critical Messages: addNotify
+dismissDialog("Open Implemented Design"); // bz (cs)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (V)
+dismissDialog("Critical Messages"); // V (cs)
+// [Engine Memory]: 3,118 MB (+219102kb) [00:52:22]
+// Elapsed time: 12 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, -106164, 2945173); // E (F, cs)
+// Device view-level: 0.7
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 182828, 3110649); // E (F, cs)
+// Device view-level: 0.9
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 233836, 3485960); // E (F, cs)
+// Device view-level: 1.4
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 189979, 3640427); // E (F, cs)
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 3,118 MB. GUI used memory: 213 MB. Current time: 10/18/23, 10:22:52 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 215204, 3689361); // E (F, cs)
+// Device view-level: 2.2
+// [GUI Memory]: 231 MB (+431kb) [00:52:41]
+// Device view-level: 2.4
+// Device view-level: 2.7
+// Device view-level: 2.9
+// HMemoryUtils.trashcanNow. Engine heap size: 2,836 MB. GUI used memory: 162 MB. Current time: 10/18/23, 10:22:57 PM CDT
+// Device view-level: 3.3
+// Device view-level: 3.1
+// Device view-level: 3.3
+// Device view-level: 3.1
+// Device view-level: 2.9
+// HMemoryUtils.trashcanNow. Engine heap size: 2,823 MB. GUI used memory: 158 MB. Current time: 10/18/23, 10:22:58 PM CDT
+// Device view-level: 2.0
+// Device view-level: 1.8
+// Device view-level: 1.6
+// Device view-level: 1.3
+// Device view-level: 1.1
+// HMemoryUtils.trashcanNow. Engine heap size: 2,820 MB. GUI used memory: 157 MB. Current time: 10/18/23, 10:23:00 PM CDT
+// Device view-level: 0.4
+// Device view-level: 0.2
+// Device view-level: 0.4
+// Device view-level: 0.9
+// Device view-level: 1.1
+// HMemoryUtils.trashcanNow. Engine heap size: 2,820 MB. GUI used memory: 159 MB. Current time: 10/18/23, 10:23:04 PM CDT
+// Device view-level: 1.3
+// RouteApi::getRouteInfo length(bytes): 323382
+// Device view-level: 1.6
+// RouteApi::getRouteInfo length(bytes): 107273
+// Device view-level: 1.8
+// Device view-level: 2.4
+// Device view-level: 2.2
+// HMemoryUtils.trashcanNow. Engine heap size: 2,820 MB. GUI used memory: 158 MB. Current time: 10/18/23, 10:23:06 PM CDT
+// Device view-level: 0.4
+// Device view-level: 0.2
+// Device view-level: 0.0
+// Elapsed time: 79 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 188353, 1198381); // E (F, cs)
+// Device view-level: 0.9
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 847958, 1536072); // E (F, cs)
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 2,820 MB. GUI used memory: 164 MB. Current time: 10/18/23, 10:24:13 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 786612, 1670881); // E (F, cs)
+// Device view-level: 2.2
+// HMemoryUtils.trashcanNow. Engine heap size: 2,819 MB. GUI used memory: 157 MB. Current time: 10/18/23, 10:24:15 PM CDT
+// Device view-level: 2.0
+// HMemoryUtils.trashcanNow. Engine heap size: 2,819 MB. GUI used memory: 158 MB. Current time: 10/18/23, 10:24:17 PM CDT
+// Device view-level: 1.6
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 872363, 1627337); // E (F, cs)
+// Device view-level: 1.9
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 901016, 1658188); // E (F, cs)
+// Device view-level: 2.3
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 927113, 1692181); // E (F, cs)
+// Device view-level: 2.6
+// Device view-level: 2.3
+// HMemoryUtils.trashcanNow. Engine heap size: 2,819 MB. GUI used memory: 159 MB. Current time: 10/18/23, 10:24:20 PM CDT
+// Device view-level: 1.0
+// Device view-level: 0.8
+// Device view-level: 1.0
+// Device view-level: 0.8
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 2,819 MB. GUI used memory: 216 MB. Current time: 10/18/23, 10:24:22 PM CDT
+// Device view-level: 0.3
+// Device view-level: 0.1
+// Device view-level: 0.0
+// Elapsed time: 366 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 2); // m (l, cs)
+selectCodeEditor("staged_mac.vhd", 255, 204); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 22:30:49 2023] Launched synth_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 12 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cs)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,777 MB. GUI used memory: 143 MB. Current time: 10/18/23, 10:30:56 PM CDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 2,777 MB. GUI used memory: 144 MB. Current time: 10/18/23, 10:30:57 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1593 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// bz (cs):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bz (cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 71 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Wed Oct 18 22:32:10 2023] Launched impl_1... Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 87 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,686 MB. GUI used memory: 119 MB. Current time: 10/18/23, 10:33:40 PM CDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8321.773 ; gain = 0.000 ; free physical = 6858 ; free virtual = 18469 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 8321.773 ; gain = 0.000 ; free physical = 6789 ; free virtual = 18400 
+// Tcl Message: Restored from archive | CPU: 0.040000 secs | Memory: 0.333115 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 8321.773 ; gain = 0.000 ; free physical = 6789 ; free virtual = 18400 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8321.773 ; gain = 0.000 ; free physical = 6789 ; free virtual = 18400 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dZ' command handler elapsed time: 4 seconds
+// V (cs): Critical Messages: addNotify
+dismissDialog("Open Implemented Design"); // bz (cs)
+// Elapsed time: 12 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (V)
+dismissDialog("Critical Messages"); // V (cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // m (l, cs)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1, false, true); // m (l, cs) - Double Click
+// Device view-level: 0.3
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // F (aI, cs)
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // F (aI, cs)
+// Device view-level: 0.0
+// HMemoryUtils.trashcanNow. Engine heap size: 2,706 MB. GUI used memory: 187 MB. Current time: 10/18/23, 10:33:59 PM CDT
+// Elapsed time: 25 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, -1670153, 2985796); // E (F, cs)
