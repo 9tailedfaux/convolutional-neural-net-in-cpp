@@ -18,6 +18,7 @@ library work;
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use IEEE.std_logic_unsigned.all;
 
 entity piped_mac is
   generic(
@@ -38,7 +39,7 @@ entity piped_mac is
 
         -- AXIS master accumulate result out interface
 		MO_AXIS_TVALID	: out	std_logic;
-		MO_AXIS_TDATA	: out	std_logic_vector(C_DATA_WIDTH-1 downto 0);
+		MO_AXIS_TDATA	: out	std_logic_vector(C_DATA_WIDTH*2-1 downto 0);
 		MO_AXIS_TLAST	: out	std_logic;
 		MO_AXIS_TREADY	: in	std_logic;
 		MO_AXIS_TID     : out   std_logic_vector(7 downto 0)
@@ -52,10 +53,22 @@ end piped_mac;
 
 architecture behavioral of piped_mac is
     -- Internal Signals
+    signal S_AXIS_TREADY     : std_logic;
+    signal S_AXIS_TDATA	     : std_logic_vector(C_DATA_WIDTH*2-1 downto 0);  -- Packed data input, made wider based off of suggestion from TA
+	signal S_AXIS_TLAST	     : std_logic;
+    signal S_AXIS_TUSER      : std_logic;
+    signal S_AXIS_TVALID	 : std_logic;
+    signal S_AXIS_TID        : std_logic_vector(7 downto 0);
+	
+	signal S_D1                 : std_logic_vector(C_DATA_WIDTH-1 downto 0); -- serves as weights
+    signal S_D2                 : std_logic_vector(C_DATA_WIDTH-1 downto 0); -- serves as activations
+    
+    signal S_MULT_OUTPUT        : std_logic_vector(C_DATA_WIDTH*2-1 downto 0);
+    signal S_ACCUMULATE_OUTPUT  : std_logic_vector(C_DATA_WIDTH*2-1 downto 0);
 	
 	
 	-- Mac stages
-    type PIPE_STAGES is (TEMP_STAGE0);
+    type PIPE_STAGES is (WAIT_FOR_VALS, MULTIPLY, ACCUMULATE, OUTPUT);
 
 	
 	-- Debug signals, make sure we aren't going crazy
@@ -82,8 +95,44 @@ begin
       else
         for i in PIPE_STAGES'left to PIPE_STAGES'right loop
             case i is  -- Stages
-                when TEMP_STAGE0 =>
-					-- Template pipline stage 0         
+                when WAIT_FOR_VALS =>
+					-- Value-waiting pipeline stage
+					S_AXIS_TDATA <= SD_AXIS_TDATA;
+                
+                    S_D1 <= S_AXIS_TDATA(C_DATA_WIDTH*2-1 downto C_DATA_WIDTH);
+			        S_D2 <= S_AXIS_TDATA(C_DATA_WIDTH-1 downto 0);
+			   
+			        S_AXIS_TREADY <= MO_AXIS_TREADY;
+			        S_AXIS_TVALID <= SD_AXIS_TVALID;
+			        S_AXIS_TID <= SD_AXIS_TID;
+			        S_AXIS_TUSER <= SD_AXIS_TUSER;
+			        S_AXIS_TLAST <= SD_AXIS_TLAST;
+					
+			    when MULTIPLY =>
+			        -- Multiply pipeline stage
+			        if MO_AXIS_TREADY = '1' then
+			           S_MULT_OUTPUT<= S_D1 * S_D2;
+			        end if;
+			        
+			    when ACCUMULATE =>
+			        -- Accumulate pipeline stage
+			        if MO_AXIS_TREADY = '1' then
+			           if S_AXIS_TUSER = '1' then
+			              S_ACCUMULATE_OUTPUT <= S_MULT_OUTPUT + S_AXIS_TDATA;
+			           else 
+			              S_ACCUMULATE_OUTPUT <= S_MULT_OUTPUT;
+			           end if;
+			        end if;
+			        
+			    when OUTPUT =>
+			        -- Output pipeline stage      
+			        
+			        MO_AXIS_TDATA <= S_ACCUMULATE_OUTPUT; -- Let's just do this for now...
+			        MO_AXIS_TVALID <= S_AXIS_TVALID;
+			        SD_AXIS_TREADY <= S_AXIS_TREADY;
+			        MO_AXIS_TID <= S_AXIS_TID;
+			        MO_AXIS_TLAST <= S_AXIS_TLAST;
+			        
             end case;  -- Stages
 		end loop;  -- Stages
       end if;  -- Reset

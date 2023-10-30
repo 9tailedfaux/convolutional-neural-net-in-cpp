@@ -117,7 +117,10 @@ begin
 			when ACCUMULATE =>
 			   if S_AXIS_TUSER = '1' then
 			      S_ACCUMULATE_OUTPUT <= S_MULT_OUTPUT + S_AXIS_TDATA;
+			   else
+			      S_ACCUMULATE_OUTPUT <= S_MULT_OUTPUT;
 			   end if;
+			      
 			
 			   -- Now we want to assign all of our output signals
 			

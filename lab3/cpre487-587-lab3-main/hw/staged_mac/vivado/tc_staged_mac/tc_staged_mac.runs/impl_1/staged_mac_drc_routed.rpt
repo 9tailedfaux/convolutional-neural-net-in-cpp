@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date         : Mon Oct 23 13:04:18 2023
-| Host         : co2050-24.ece.iastate.edu running 64-bit Red Hat Enterprise Linux release 8.8 (Ootpa)
+| Date         : Mon Oct 30 13:09:44 2023
+| Host         : co2050-22.ece.iastate.edu running 64-bit Red Hat Enterprise Linux release 8.8 (Ootpa)
 | Command      : report_drc -file staged_mac_drc_routed.rpt -pb staged_mac_drc_routed.pb -rpx staged_mac_drc_routed.rpx
 | Design       : staged_mac
 | Device       : xc7z020clg484-1
