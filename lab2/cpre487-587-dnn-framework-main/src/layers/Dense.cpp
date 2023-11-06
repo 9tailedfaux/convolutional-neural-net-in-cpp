@@ -61,7 +61,7 @@ void DenseLayer::computeQuantized(const LayerData& dataIn) const {
     
     for (u_int32_t m = 0; m < M; m++) {
         //printf("m: %d\n", (int)m);
-        fp32 thisOutput = 0;
+        ui8 thisOutput = 0;
         for (u_int32_t n = 0; n < N; n++) {
             if (inData[n] > 100.0) {
                 //printf("indata[%d]: %lf\n", (int)n, inData[n]);

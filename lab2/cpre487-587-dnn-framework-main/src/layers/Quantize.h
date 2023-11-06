@@ -4,7 +4,7 @@
 namespace ML {
     #define ABSMAX_WEIGHT 1.3241188526153564
     #define ABSMAX_BIAS 0.23974871635437012
-    #define ABSMAX_INPUT 255
+    #define ABSMAX_INPUT 1.0
 
     template <typename I, typename O> O quantize(I input, fp32 scale);
     template <typename I, typename O> O dequantize(I input, fp32 scale);
