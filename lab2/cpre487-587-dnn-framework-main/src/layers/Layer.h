@@ -40,7 +40,7 @@ class LayerData {
     template <typename T> inline void allocData();
 
     // Load data values
-    template <typename T> inline void loadData();
+    template <typename F, typename A> inline void loadData();
 
     // Clean up data values
     template <typename T> inline void freeData();
@@ -115,17 +115,17 @@ template <typename T> void LayerData::allocData() {
 }
 
 // Load data values
-template <typename T> inline void LayerData::loadData() {
+template <typename F, typename A> inline void LayerData::loadData() {
     // Ensure a file path to load data from has been given
     assert(!params.filePath.empty() && "No file path given for required layer data to load from");
 
     // If it has already been allocated, free it
     if (alloced) {
-        freeData<T>();
+        freeData<A>();
     }
 
     // Load our values
-    data = reinterpret_cast<void*>(loadArray<T>(params.filePath, params.dims));
+    data = reinterpret_cast<void*>(loadArray<F, A>(params.filePath, params.dims));
     alloced = true;
 }
 

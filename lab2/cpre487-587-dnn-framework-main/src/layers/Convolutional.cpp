@@ -7,6 +7,7 @@
 #include "../Types.h"
 #include "../Utils.h"
 #include "Layer.h"
+#include "Quantize.h"
 
 namespace ML {
 // --- Begin Student Code ---
@@ -69,6 +70,10 @@ void ConvolutionalLayer::computeQuantized(const LayerData& dataIn) const {
     Array3D_ui8 outData = getOutputData().getData<Array3D_ui8>();
     Array4D_i8 filter = weightData.getData<Array4D_i8>();
     Array1D_i32 biases = biasData.getData<Array1D_i32>();
+    // Array4D_i8 filter = reinterpret_cast<Array4D_i8>(allocArray<i8>(weightParam.dims));
+    // Array1D_i32 biases = reinterpret_cast<Array1D_i32>(allocArray<i32>(biasParam.dims));
+    // quantize_weights<Array4D_fp32, Array4D_i8>(weightData.getData<Array4D_fp32>(), filter, weightParam.dims);
+    // quantize_biases(biasData.getData<Array1D_fp32>(), biases, biasParam.dims);
 
     LayerParams inputParams = getInputParams();
     size_t C = inputParams.dims[2]; //channels in input
@@ -94,7 +99,7 @@ void ConvolutionalLayer::computeQuantized(const LayerData& dataIn) const {
             //printf("Checkpoint 5. p = %d\n", p);
             for (uint32_t m = 0; m < M; m++) {
                 //printf("Checkpoint 6. q = %d\n", q);
-                fp32 thisOutput = 0;
+                ui8 thisOutput = 0;
                 for (uint32_t r = 0; r < R; r++) {
                     //printf("Checkpoint 7. c = %d\n", c);
                     for (uint32_t s = 0; s < S; s++) { 
@@ -304,7 +309,5 @@ void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
 void ConvolutionalLayer::computeSIMD(const LayerData& dataIn) const {
     // TODO: Your Code Here...
 }
-
-fp32 relu(const fp32 input) { return input < 0 ? 0 : input; }
 short stride(const size_t inDim, const size_t outDim, const size_t filterDim) { return (short)((inDim - filterDim) / (outDim - 1)); }
 }  // namespace ML

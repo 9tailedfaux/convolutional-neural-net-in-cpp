@@ -12,6 +12,8 @@
 #include <vector>
 
 #include "Config.h"
+#include "Types.h"
+#include "layers/Quantize.h"
 
 // Check for string formatting support
 #if __has_include(<format>)
@@ -454,8 +456,9 @@ void loadArrayData(std::ifstream& file, T_BASE* values, const std::size_t* dims,
 }
 
 // Entry point to loading data from a binary file into an array
-template <typename T> T loadArray(const std::filesystem::path& filepath, const std::vector<std::size_t>& dims) {
-    static_assert(std::is_pointer<T>(), "Cannot load non-pointer values (arrays)");
+template <typename F, typename A = F> A loadArray(const std::filesystem::path& filepath, const std::vector<std::size_t>& dims, fp32 scale = 0) {
+    static_assert(std::is_pointer<F>(), "Cannot load non-pointer values (arrays)");
+    static_assert(std::is_pointer<A>(), "Cannot load non-pointer values (arrays)");
     // assert(std::rank<T>() == dims.size() && "Array type does not have the same rank as the dims provided");
 
     // Open our file and check for issues
@@ -473,11 +476,37 @@ template <typename T> T loadArray(const std::filesystem::path& filepath, const s
     }
 
     // Allocate our array
-    T values = allocArray<T>(dims);
+    F values = allocArray<F>(dims);
 
     // Load the data
-    typedef typename remove_all_pointers<T>::type T_BASE;
-    loadArrayData<T_BASE>(file, reinterpret_cast<T_BASE*>(values), dims.data(), dims.size());
+    typedef typename remove_all_pointers<A>::type A_BASE;
+    typedef typename remove_all_pointers<F>::type F_BASE;
+    loadArrayData<F_BASE>(file, reinterpret_cast<F_BASE*>(values), dims.data(), dims.size());
+
+    if (typeid(F) != typeid(A)) {
+        A values_q = allocArray<A>(dims);
+        switch (dims.size())
+        {
+        case 1:
+            quantize_1Darray<F_BASE, A_BASE>(values, values_q, dims, scale);
+            break;
+        case 2:
+            quantize_2Darray<F_BASE, A_BASE>(values, values_q, dims, scale);
+            break;
+        case 3:
+            quantize_3Darray<F_BASE, A_BASE>(values, values_q, dims, scale);
+            break;
+        case 4:
+            quantize_4Darray<F_BASE, A_BASE>(values, values_q, dims, scale);
+            break;
+        
+        default:
+            break;
+        }
+
+        freeArray<F_BASE>(values);
+        values = values_q;
+    }
 
 #ifdef ZEDBOARD
     // Close our file (ifstream deconstructor does this for us)

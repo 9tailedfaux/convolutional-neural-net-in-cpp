@@ -21,6 +21,7 @@ class Model {
     // Internal memory management
     // Allocate the internal output buffers for each layer in the model
     template <typename T> void allocLayers();
+    template <typename W, typename B, typename I> void allocLayers();
 
     // Free all layers
     template <typename T> void freeLayers();

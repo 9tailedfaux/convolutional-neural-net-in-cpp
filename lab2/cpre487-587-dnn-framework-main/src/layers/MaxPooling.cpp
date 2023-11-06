@@ -66,12 +66,12 @@ void MaxPoolingLayer::computeQuantized(const LayerData& dataIn) const {
         for (uint32_t x = 0; x < inputHeight; x +=2) {
             for (uint32_t z = 0; z < channels; z++) {
 
-                fp32 _1 = inData[x][y][z];
-                fp32 _2 = inData[x+1][y][z];
-                fp32 _3 = inData[x][y+1][z];
-                fp32 _4 = inData[x+1][y+1][z];
-                fp32 vals[4] = {_1, _2, _3, _4};
-                fp32 max = vals[0];
+                ui8 _1 = inData[x][y][z];
+                ui8 _2 = inData[x+1][y][z];
+                ui8 _3 = inData[x][y+1][z];
+                ui8 _4 = inData[x+1][y+1][z];
+                ui8 vals[4] = {_1, _2, _3, _4};
+                ui8 max = vals[0];
                 for (int i = 1; i < 4; i++) {
                     if (vals[i] > max) max = vals[i];
                 }
