@@ -2,6 +2,8 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+// These two are implemented for the timing concept used for timing testing
+#include <chrono>
 
 #include "Config.h"
 #include "Model.h"
@@ -252,10 +254,22 @@ int main(int argc, char** argv) {
     // runLayerTest(0, model, basePath, Layer::InfType::NAIVE);
 
     // Run an end-to-end infrence test
-    runInfrenceTest(model, basePath, Layer::InfType::THREADED);
-    // runInfrenceTest(model, basePath, Layer::InfType::NAIVE);
-    
-    
+    // runInfrenceTest(model, basePath, Layer::InfType::THREADED);
+
+    using std::chrono::high_resolution_clock;
+    using std::chrono::duration_cast;
+    using std::chrono::duration;
+    using std::chrono::milliseconds;
+
+    auto start_time = high_resolution_clock::now();
+    runInfrenceTest(model, basePath, Layer::InfType::NAIVE);
+    auto end_time = high_resolution_clock::now();
+
+    auto ms_int = duration_cast<milliseconds>(end_time - start_time);
+    duration<double, std::milli> ms_double = end_time - start_time;
+
+    std::cout << ms_int.count() << "ms\n";
+    std::cout << ms_double.count() << "ms\n";
 
     // Clean up
     model.freeLayers<fp32>();
