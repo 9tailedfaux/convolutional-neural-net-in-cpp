@@ -6,8 +6,8 @@
 rwildcard=$(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) $(filter $(subst *,%,$2),$d))
 GCCVERSIONLTQ9 := $(shell expr `gcc -dumpversion | cut -f1 -d.` \< 9)
 
-DEBUG ?= false
-SIMD ?= true
+DEBUG ?= true
+SIMD ?= false
 BDIR = build
 BIN = $(BDIR)
 SDIR = src
@@ -25,7 +25,7 @@ EXE_DEBUG = $(BIN)/ml_debug
 	CC_ALL = -lstdc++ -Wall -Werror -pedantic -std=c++2a
 	CC_DEBUG = -g -Og
 	CC_OPT_FLAGS = -O3 -fno-tree-pre
-	CC_SIMD_FLAGS = -march=native -msse2 -mavx -mavx2
+	CC_SIMD_FLAGS = -march=native
 	CC_FLAGS = $(CC_ALL) $(CC_OPT_FLAGS) $(if $(filter $(SIMD), true), $(CC_SIMD_FLAGS),)
 	CC_DEBUG_FLAGS = $(CC_ALL) $(CC_DEBUG) $(if $(filter $(SIMD), true), $(CC_SIMD_FLAGS),)
 

@@ -172,8 +172,8 @@ void ConvolutionalLayer::computeThreaded(const LayerData& dataIn) const {
     short UP = stride(H, P, R);
     short UQ = stride(W, Q, S);
 
-    size_t numThreads = std::thread::hardware_concurrency();
-    numThreads = numThreads ? numThreads : 4;
+    size_t numThreads = 64;
+    //numThreads = numThreads ? numThreads : 4;
     printf("numThreads: %d\n", (int)numThreads);
     //std::thread* threads = (std::thread*)malloc(numThreads * sizeof(std::thread));
     std::vector<std::thread> threads;
@@ -209,7 +209,7 @@ void ConvolutionalLayer::computeThreaded(const LayerData& dataIn) const {
 
                 //printf("checking against max threads\n");
 
-                printf("threads.size: %d\n", (int)threads.size());
+                //printf("threads.size: %d\n", (int)threads.size());
 
                 if (threads.size() >= numThreads) {
                     //printf("joining all threads\n");
