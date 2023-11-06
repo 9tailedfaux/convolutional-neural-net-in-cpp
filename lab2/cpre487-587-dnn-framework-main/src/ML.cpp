@@ -187,7 +187,7 @@ void runBasicTest(const Model& model, const fs::path& basePath) {
     freeArray<Array3D_fp32>(imgCopy, dims);
 }
 
-void runLayerTest(const std::size_t layerNum, const Model& model, const fs::path& basePath) {
+void runLayerTest(const std::size_t layerNum, const Model& model, const fs::path& basePath, const Layer::InfType infType) {
     // Load an image
     logInfo("--- Running Infrence Test ---");
     dimVec inDims = {64, 64, 3};
@@ -197,7 +197,7 @@ void runLayerTest(const std::size_t layerNum, const Model& model, const fs::path
     img.loadData<Array3D_fp32>();
 
     // Run infrence on the model
-    const LayerData output = model.infrenceLayer(img, layerNum, Layer::InfType::NAIVE);
+    const LayerData output = model.infrenceLayer(img, layerNum, infType);
 
     // Compare the output
     // Construct a LayerData object from a LayerParams one
@@ -207,7 +207,7 @@ void runLayerTest(const std::size_t layerNum, const Model& model, const fs::path
     output.compareWithinPrint<Array3D_fp32>(expected);
 }
 
-void runInfrenceTest(const Model& model, const fs::path& basePath) {
+void runInfrenceTest(const Model& model, const fs::path& basePath, const Layer::InfType infType) {
     // Load an image
     logInfo("--- Running (FULL) Infrence Test ---");
     dimVec inDims = {64, 64, 3};
@@ -217,7 +217,7 @@ void runInfrenceTest(const Model& model, const fs::path& basePath) {
     img.loadData<Array3D_fp32>();
     printf("running inference on model\n");
     // Run infrence on the model
-    const LayerData output = model.infrence(img, Layer::InfType::NAIVE);
+    const LayerData output = model.infrence(img, infType);
 
     // Compare the output
     // Construct a LayerData object from a LayerParams one
@@ -245,13 +245,17 @@ int main(int argc, char** argv) {
     model.allocLayers<fp32>();
 
     // Run some framework tests as an example of loading data
-    runBasicTest(model, basePath);
+    //runBasicTest(model, basePath);
 
     // Run a layer infrence test
-    runLayerTest(0, model, basePath);
+    // runLayerTest(0, model, basePath, Layer::InfType::TILED);
+    // runLayerTest(0, model, basePath, Layer::InfType::NAIVE);
 
     // Run an end-to-end infrence test
-    runInfrenceTest(model, basePath);
+    runInfrenceTest(model, basePath, Layer::InfType::THREADED);
+    // runInfrenceTest(model, basePath, Layer::InfType::NAIVE);
+    
+    
 
     // Clean up
     model.freeLayers<fp32>();

@@ -85,6 +85,7 @@ class Layer {
 
     // Abstract/Virtual Functions
     virtual void computeNaive(const LayerData& dataIn) const = 0;
+    virtual void computeQuantized(const LayerData& dataIn) const = 0;
     virtual void computeThreaded(const LayerData& dataIn) const = 0;
     virtual void computeTiled(const LayerData& dataIn) const = 0;
     virtual void computeSIMD(const LayerData& dataIn) const = 0;
