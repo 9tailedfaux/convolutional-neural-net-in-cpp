@@ -9,10 +9,6 @@ namespace ML {
         return (O)(scale * input);
     }
 
-    template <typename I, typename O> O dequantize(I input, fp32 scale) {
-        return (O)(input / scale);
-    }
-
     template <typename I, typename O> void quantize_weights(I input, O output, std::vector<size_t> dims) {
         assert(typeid(I) == typeid(Array2D_fp32) || typeid(I) == typeid(Array4D_fp32));
 
@@ -68,25 +64,10 @@ namespace ML {
             }
         }
     }
-
-    template <typename Iv, typename Ov> void dequantize_1Darray(Iv* input, Ov* output, std::vector<size_t> dims, fp32 scale) {
-        for(uint32_t i = 0; i < dims[0]; i++) {
-            output[i] = dequantize<Iv, Ov>(input[i], scale);
-        }
-    }
     template <typename Iv, typename Ov> void dequantize_2Darray(Iv** input, Ov** output, std::vector<size_t> dims, fp32 scale) {
         for(uint32_t i = 0; i < dims[0]; i++) {
             for(uint32_t j = 0; j < dims[1]; j++) {
                 output[i][j] = dequantize<Iv, Ov>(input[i][j], scale);
-            }
-        }
-    }
-    template <typename Iv, typename Ov> void dequantize_3Darray(Iv*** input, Ov*** output, std::vector<size_t> dims, fp32 scale) {
-        for(uint32_t i = 0; i < dims[0]; i++) {
-            for(uint32_t j = 0; j < dims[1]; j++) {
-                for (uint32_t k = 0; k < dims[2]; k++) {
-                    output[i][j][k] = dequantize<Iv, Ov>(input[i][j][k], scale);
-                }
             }
         }
     }
@@ -134,10 +115,6 @@ namespace ML {
 
     void dequantize_biases (Array1D_i32 input, Array1D_fp32 output, std::vector<size_t> dims) {
         dequantize_1Darray<i32, fp32>(input, output, dims, scale_biases());
-    }
-
-    template <typename I, typename R> fp32 scale(I absolute_max) {
-        return (std::numeric_limits<R>::max() / absolute_max);
     }
 
     fp32 scale_biases() {

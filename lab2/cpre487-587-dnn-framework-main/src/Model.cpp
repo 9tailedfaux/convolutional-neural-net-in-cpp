@@ -42,6 +42,9 @@ const LayerData& Model::infrenceLayer(const LayerData& inData, const int layerNu
     case Layer::InfType::SIMD:
         layer.computeSIMD(inData);
         break;
+    case Layer::InfType::QUANTIZED:
+        layer.computeQuantized(inData);
+        break;
     default:
         assert(false && "Infrence Type not implemented");
     }

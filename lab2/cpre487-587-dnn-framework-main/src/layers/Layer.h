@@ -64,7 +64,7 @@ class LayerData {
 class Layer {
    public:
     // Infrence Type
-    enum class InfType { NAIVE, THREADED, TILED, SIMD };
+    enum class InfType { NAIVE, THREADED, TILED, SIMD, QUANTIZED };
 
     // Layer Type
     enum class LayerType { NONE, CONVOLUTIONAL, DENSE, SOFTMAX, MAX_POOLING, FLATTEN};

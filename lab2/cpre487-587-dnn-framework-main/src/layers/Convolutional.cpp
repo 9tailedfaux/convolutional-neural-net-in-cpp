@@ -65,6 +65,7 @@ void ConvolutionalLayer::computeNaive(const LayerData& dataIn) const {
 }
 
 void ConvolutionalLayer::computeQuantized(const LayerData& dataIn) const {
+    //printf("got to first convolution\n");
     Array3D_ui8 inData = dataIn.getData<Array3D_ui8>();
     Array3D_ui8 outData = getOutputData().getData<Array3D_ui8>();
     Array4D_i8 filter = weightData.getData<Array4D_i8>();
@@ -94,7 +95,7 @@ void ConvolutionalLayer::computeQuantized(const LayerData& dataIn) const {
             //printf("Checkpoint 5. p = %d\n", p);
             for (uint32_t m = 0; m < M; m++) {
                 //printf("Checkpoint 6. q = %d\n", q);
-                fp32 thisOutput = 0;
+                ui8 thisOutput = 0;
                 for (uint32_t r = 0; r < R; r++) {
                     //printf("Checkpoint 7. c = %d\n", c);
                     for (uint32_t s = 0; s < S; s++) { 
