@@ -203,18 +203,20 @@ void runLayerTest(const std::size_t layerNum, const Model& model, const fs::path
 
     // Compare the output
     // Construct a LayerData object from a LayerParams one
-    dimVec outDims = model.getOutputLayer()->getOutputParams().dims;
+    dimVec outDims = model.getLayer(layerNum)->getOutputParams().dims;
     LayerData expected({sizeof(fp32), outDims, basePath / "image_0_data" / "layer_0_output.bin"});
 
-    Array1D_fp32 dequantizedOutput = allocArray<Array1D_fp32>(outDims);
-    dequantize_1Darray<ui8, fp32>(output.getData<Array1D_ui8>(), dequantizedOutput, outDims, scale_inputs());
+    Array3D_fp32 dequantizedOutput = allocArray<Array3D_fp32>(outDims);
+    dequantize_3Darray<ui8, fp32>(output.getData<Array3D_ui8>(), dequantizedOutput, outDims, scale_inputs());
 
     for(size_t i = 0; i < outDims.size(); i++) {
         printf("%i\n", (int)outDims[i]);
     }
     
-    expected.loadData<Array1D_fp32>();
-    compareArrayWithinPrint<Array1D_fp32>(dequantizedOutput, expected.getData<Array1D_fp32>(), outDims);
+    expected.loadData<Array3D_fp32>();
+    compareArrayWithinPrint<Array3D_fp32>(expected.getData<Array3D_fp32>(), dequantizedOutput, outDims);
+
+    freeArray<Array3D_fp32>(dequantizedOutput, outDims);
 }
 
 void runInfrenceTest(const Model& model, const fs::path& basePath, const Layer::InfType infType) {
@@ -266,8 +268,8 @@ int main(int argc, char** argv) {
     // runLayerTest(0, model, basePath, Layer::InfType::NAIVE);
 
     // Run an end-to-end infrence test
-    runInfrenceTest(model, basePath, Layer::InfType::QUANTIZED);
-    // runLayerTest(0, model, basePath, Layer::InfType::QUANTIZED);
+    // runInfrenceTest(model, basePath, Layer::InfType::QUANTIZED);
+    runLayerTest(0, model, basePath, Layer::InfType::QUANTIZED);
     // runInfrenceTest(model, basePath, Layer::InfType::NAIVE);
     
     

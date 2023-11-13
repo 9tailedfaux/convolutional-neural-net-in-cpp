@@ -54,7 +54,7 @@ void ConvolutionalLayer::computeNaive(const LayerData& dataIn) const {
                         }
                     }
                 }
-                outData[p][q][m] = relu(thisOutput + biases[m]);
+                outData[p][q][m] = relu<fp32>(thisOutput + biases[m]);
             }
         }
     }
@@ -73,13 +73,13 @@ void ConvolutionalLayer::computeQuantized(const LayerData& dataIn) const {
 
     LayerParams inputParams = getInputParams();
     size_t C = inputParams.dims[2]; //channels in input
-    size_t W = inputParams.dims[0]; //width of input
-    size_t H = inputParams.dims[1]; //height of input
+    size_t W = inputParams.dims[1]; //width of input
+    size_t H = inputParams.dims[0]; //height of input
 
     LayerParams outParams = getOutputParams();
     size_t M = outParams.dims[2]; //channels in output
-    size_t Q = outParams.dims[0]; //width of output
-    size_t P = outParams.dims[1]; //height of output
+    size_t Q = outParams.dims[1]; //width of output
+    size_t P = outParams.dims[0]; //height of output
 
     size_t R = weightParam.dims[0]; //height of filter
     size_t S = weightParam.dims[1]; //width of filter
@@ -107,7 +107,7 @@ void ConvolutionalLayer::computeQuantized(const LayerData& dataIn) const {
                         }
                     }
                 }
-                outData[p][q][m] = relu(thisOutput + biases[m]);
+                outData[p][q][m] = relu<ui8>(thisOutput + biases[m]);
             }
         }
     }
@@ -145,7 +145,7 @@ void threadFunction(
                 }
             }
         }
-        *thisOutput = relu(*thisOutput + biases[m]);
+        *thisOutput = relu<fp32>(*thisOutput + biases[m]);
 }
 
 // Compute the convolution using threads
@@ -268,33 +268,22 @@ void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
     uint16_t MT = M / T;
 
     for (uint16_t p = 0; p < P; p++) {
-        //printf("Checkpoint 4. m = %d\n", m);
         for (uint16_t q = 0; q < Q; q++) {
-            //printf("Checkpoint 5. p = %d\n", p);
-            
-            //printf("Checkpoint 6. q = %d\n", q);
             for (uint16_t r = 0; r < R; r++) {
-                //printf("Checkpoint 7. c = %d\n", c);
                 for (uint16_t s = 0; s < S; s++) { 
-                    //printf("Checkpoint 8. r = %d\n", r);
                     for (uint8_t ct = 0; ct < T; ct++) {
-
                         for (uint8_t mt = 0; mt < T; mt++){
                             for (uint16_t c = ct * CT; c < CT * (ct + 1); c += 1) { //lol
-                                //printf("Checkpoint 9. s = %d\n", s);
-
-                                for (uint16_t m = mt * MT; m < MT * (mt + 1); m++) {
-                                    
+                                for (uint16_t m = mt * MT; m < MT * (mt + 1); m++) {  
                                     if (c == 0 && r == 0 && s == 0) outData[p][q][m] = 0;
 
                                     outData[p][q][m] += ((inData[UP + r][UQ + s][c] * filter[r][s][c][m]));
 
-                                    if (c == C - 1 && r == R - 1 && s == S - 1) outData[p][q][m] = relu(outData[p][q][m] + biases[m]);
+                                    if (c == C - 1 && r == R - 1 && s == S - 1) outData[p][q][m] = relu<fp32>(outData[p][q][m] + biases[m]);
                                 }
                             }
                         }
                     }
-                    
                 }
             }
         }
@@ -305,7 +294,5 @@ void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
 void ConvolutionalLayer::computeSIMD(const LayerData& dataIn) const {
     // TODO: Your Code Here...
 }
-
-fp32 relu(const fp32 input) { return input < 0 ? 0 : input; }
 short stride(const size_t inDim, const size_t outDim, const size_t filterDim) { return (short)((inDim - filterDim) / (outDim - 1)); }
 }  // namespace ML
