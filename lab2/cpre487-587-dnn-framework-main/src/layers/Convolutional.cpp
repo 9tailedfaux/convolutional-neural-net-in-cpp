@@ -225,8 +225,8 @@ void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
 
     LayerParams inputParams = getInputParams();
     size_t C = inputParams.dims[2]; //channels in input
-    size_t W = inputParams.dims[0]; //width of input
-    size_t H = inputParams.dims[1]; //height of input
+    // size_t W = inputParams.dims[0]; //width of input
+    // size_t H = inputParams.dims[1]; //height of input
 
     LayerParams outParams = getOutputParams();
     size_t M = outParams.dims[2]; //channels in output

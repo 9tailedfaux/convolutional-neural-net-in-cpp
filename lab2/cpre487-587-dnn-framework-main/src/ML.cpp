@@ -249,10 +249,10 @@ int main(int argc, char** argv) {
 
     // Run a layer infrence test
     // runLayerTest(1, model, basePath, Layer::InfType::NAIVE);
-    runLayerTest(0, model, basePath, Layer::InfType::THREADED);
+    // runLayerTest(0, model, basePath, Layer::InfType::THREADED);
 
     // Run an end-to-end infrence test
-    // runInfrenceTest(model, basePath, Layer::InfType::NAIVE);
+    runInfrenceTest(model, basePath, Layer::InfType::NAIVE);
     // runInfrenceTest(model, basePath, Layer::InfType::NAIVE);
     
     
