@@ -97,7 +97,7 @@ Model buildToyModel(const fs::path modelPath) {
     auto conv5 = new ConvolutionalLayer({{sizeof(fp32), {12, 12, 64}},
                                          {sizeof(fp32), {10, 10, 64}},
                                          {sizeof(fp32), {3, 3, 64, 64}, modelPath / "conv5_weights.bin"},
-                                         {sizeof(fp32), {64}, modelPath /  "conv5_biases.bin"}});
+                                         {sizeof(fp32), {64}, modelPath / "conv5_biases.bin"}});
     model.addLayer(conv5);
 
     // --- Conv 6: L8 ---
@@ -145,9 +145,9 @@ Model buildToyModel(const fs::path modelPath) {
     // --- Softmax 1: L13 ---
     // Input shape: 200
     // Output shape: 200
-    // auto softmax = new SoftmaxLayer({{sizeof(fp32), {200}},
-    //                                  {sizeof(fp32), {200}}});
-    // model.addLayer(softmax);
+    auto softmax = new SoftmaxLayer({{sizeof(fp32), {200}},
+                                     {sizeof(fp32), {200}}});
+    model.addLayer(softmax);
 
 
     return model;
@@ -222,7 +222,7 @@ void runInfrenceTest(const Model& model, const fs::path& basePath, const Layer::
     // Compare the output
     // Construct a LayerData object from a LayerParams one
     dimVec outDims = model.getOutputLayer()->getOutputParams().dims;
-    LayerData expected({sizeof(fp32), outDims, basePath / "image_0_data" / "layer_0_output.bin"});
+    LayerData expected({sizeof(fp32), outDims, basePath / "image_0_data" / "layer_11_output.bin"});
     expected.loadData<Array3D_fp32>();
     output.compareWithinPrint<Array3D_fp32>(expected);
 }
@@ -248,11 +248,11 @@ int main(int argc, char** argv) {
     //runBasicTest(model, basePath);
 
     // Run a layer infrence test
-    // runLayerTest(0, model, basePath, Layer::InfType::TILED);
-    // runLayerTest(0, model, basePath, Layer::InfType::NAIVE);
+    // runLayerTest(1, model, basePath, Layer::InfType::NAIVE);
+    runLayerTest(0, model, basePath, Layer::InfType::THREADED);
 
     // Run an end-to-end infrence test
-    runInfrenceTest(model, basePath, Layer::InfType::THREADED);
+    // runInfrenceTest(model, basePath, Layer::InfType::NAIVE);
     // runInfrenceTest(model, basePath, Layer::InfType::NAIVE);
     
     

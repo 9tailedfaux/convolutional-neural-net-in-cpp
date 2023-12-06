@@ -15,32 +15,27 @@ namespace ML {
 void DenseLayer::computeNaive(const LayerData& dataIn) const {
     Array1D_fp32 inData = dataIn.getData<Array1D_fp32>();
     Array1D_fp32 outData = getOutputData().getData<Array1D_fp32>();
-    Array2D_fp32 weights = weightData.getData<Array2D_fp32>();
-    Array1D_fp32 biases = biasData.getData<Array1D_fp32>();
+    Array2D_fp32 weights = getWeightData().getData<Array2D_fp32>();
+    Array1D_fp32 biases = getBiasData().getData<Array1D_fp32>();
 
     LayerParams inputParams = getInputParams();
     size_t N = inputParams.dims[0];
 
     LayerParams outParams = getOutputParams();
     size_t M = outParams.dims[0];
-
-    //size_t R = weightParam.dims[0];
-    //size_t S = weightParam.dims[1];    
     
     for (u_int32_t m = 0; m < M; m++) {
         //printf("m: %d\n", (int)m);
-        fp32 thisOutput = 0;
+        outData[m] = 0.0;
         for (u_int32_t n = 0; n < N; n++) {
-            if (inData[n] > 100.0) {
-                //printf("indata[%d]: %lf\n", (int)n, inData[n]);
-            }
-            
-            thisOutput += (weights[n][m] * inData[n]);
+            outData[m] += (weights[n][m] * inData[n]);
             
         }
-        outData[m] = thisOutput + biases[m];
+        outData[m] += biases[m];
+
+        if (outData[m] < 0 && M == 256) outData[m] = 0;
     }
-    softMax(outData, M);
+    // softMax(outData, M);
     //printf("outdata: %lf\n", outData[200]);
 }
 
@@ -71,9 +66,8 @@ void DenseLayer::computeQuantized(const LayerData& dataIn) const {
             
         }
         outData[m] = thisOutput + biases[m];
+        if (outData[m] < 0 && M == 256) outData[m] = 0;
     }
-    softMax(outData, M);
-    //printf("outdata: %lf\n", outData[200]);
 }
 
 // Compute the convolution using threads

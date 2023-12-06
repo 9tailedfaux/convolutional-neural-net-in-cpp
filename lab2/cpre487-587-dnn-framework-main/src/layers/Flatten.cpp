@@ -16,7 +16,6 @@ void FlattenLayer::computeNaive(const LayerData& dataIn) const {
     Array1D_fp32 outData = getOutputData().getData<Array1D_fp32>();
 
     LayerParams inputParams = getInputParams();
-    LayerParams outputParams = getOutputParams();
 
     size_t inputWidth = inputParams.dims[0];
     size_t inputHeight = inputParams.dims[1];
@@ -24,14 +23,12 @@ void FlattenLayer::computeNaive(const LayerData& dataIn) const {
 
     int foo = 0; //Used to iterate through output array(?)
 
-    for (uint32_t i = 0; i < channels; i++) {
+    for (uint32_t i = 0; i < inputWidth; i++) {
         for (uint32_t j = 0; j < inputHeight; j++) {
-            for (uint32_t k = 0; k < inputWidth; k++) {
-                if (inData[k][j][i] > 100.0) {
-                    //printf("indata[%d][%d][%d]: %lf\n", (int)k, (int)j, (int)i, inData[k][j][i]);
-                }
+            for (uint32_t k = 0; k < channels; k++) {
 
-                outData[foo++] = inData[k][j][i];
+                outData[foo] = inData[i][j][k];
+                foo++;
             }
         }
     }

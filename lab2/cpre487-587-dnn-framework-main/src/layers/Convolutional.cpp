@@ -15,42 +15,37 @@ namespace ML {
 void ConvolutionalLayer::computeNaive(const LayerData& dataIn) const {
     Array3D_fp32 inData = dataIn.getData<Array3D_fp32>();
     Array3D_fp32 outData = getOutputData().getData<Array3D_fp32>();
-    Array4D_fp32 filter = weightData.getData<Array4D_fp32>();
-    Array1D_fp32 biases = biasData.getData<Array1D_fp32>();
+    Array4D_fp32 filter = getWeightData().getData<Array4D_fp32>();
+    Array1D_fp32 biases = getBiasData().getData<Array1D_fp32>();
 
-    LayerParams inputParams = getInputParams();
-    size_t C = inputParams.dims[2]; //channels in input
-    size_t W = inputParams.dims[0]; //width of input
-    size_t H = inputParams.dims[1]; //height of input
+    LayerParams weightParams = getWeightParams();
+    size_t C = weightParams.dims[2]; //channels in input
+    size_t R = weightParams.dims[1]; //height of filter
+    size_t S = weightParam.dims[0]; //width of filter
+
 
     LayerParams outParams = getOutputParams();
     size_t M = outParams.dims[2]; //channels in output
-    size_t Q = outParams.dims[0]; //width of output
-    size_t P = outParams.dims[1]; //height of output
-
-    size_t R = weightParam.dims[0]; //height of filter
-    size_t S = weightParam.dims[1]; //width of filter
+    size_t Q = outParams.dims[1]; //width of output
+    size_t P = outParams.dims[0]; //height of output
 
     //printf("Checkpoint 3\n");
 
-    short UP = stride(H, P, R);
-    short UQ = stride(W, Q, S);
-
-    for (uint32_t p = 0; p < P; p++) {
+    for (uint32_t m = 0; m < M; m++) {
         //printf("Checkpoint 4. m = %d\n", m);
-        for (uint32_t q = 0; q < Q; q++) {
+        for (uint32_t p = 0; p < P; p++) {
             //printf("Checkpoint 5. p = %d\n", p);
-            for (uint32_t m = 0; m < M; m++) {
+            for (uint32_t q = 0; q < Q; q++) {
                 //printf("Checkpoint 6. q = %d\n", q);
-                fp32 thisOutput = 0;
-                for (uint32_t r = 0; r < R; r++) {
+                fp32 thisOutput = 0.0;
+                for (uint32_t c = 0; c < C; c++) { // something something joke
                     //printf("Checkpoint 7. c = %d\n", c);
-                    for (uint32_t s = 0; s < S; s++) { 
+                    for (uint32_t r = 0; r < R; r++) { 
                         //printf("Checkpoint 8. r = %d\n", r);
-                        for (uint32_t c = 0; c < C; c += 1) { //lol
+                        for (uint32_t s = 0; s < S; s++) { //lol
                             //printf("Checkpoint 9. s = %d\n", s);
 
-                            thisOutput += ((inData[UP + r][UQ + s][c] * filter[r][s][c][m]));
+                            thisOutput += ((inData[p+r][q+s][c] * filter[r][s][c][m]));
                         }
                     }
                 }
@@ -58,51 +53,43 @@ void ConvolutionalLayer::computeNaive(const LayerData& dataIn) const {
             }
         }
     }
-
-    
-    //printf("%lf", data[0][0][0]);
 
 }
 
 void ConvolutionalLayer::computeQuantized(const LayerData& dataIn) const {
     Array3D_ui8 inData = dataIn.getData<Array3D_ui8>();
     Array3D_ui8 outData = getOutputData().getData<Array3D_ui8>();
-    Array4D_i8 filter = weightData.getData<Array4D_i8>();
-    Array1D_i32 biases = biasData.getData<Array1D_i32>();
+    Array4D_i8 filter = getWeightData().getData<Array4D_i8>();
+    Array1D_i32 biases = getBiasData().getData<Array1D_i32>();
 
-    LayerParams inputParams = getInputParams();
-    size_t C = inputParams.dims[2]; //channels in input
-    size_t W = inputParams.dims[0]; //width of input
-    size_t H = inputParams.dims[1]; //height of input
+    LayerParams weightParams = getWeightParams();
+    size_t C = weightParams.dims[2]; //channels in input
+    size_t R = weightParams.dims[1]; //height of filter
+    size_t S = weightParam.dims[0]; //width of filter
+
 
     LayerParams outParams = getOutputParams();
     size_t M = outParams.dims[2]; //channels in output
-    size_t Q = outParams.dims[0]; //width of output
-    size_t P = outParams.dims[1]; //height of output
-
-    size_t R = weightParam.dims[0]; //height of filter
-    size_t S = weightParam.dims[1]; //width of filter
+    size_t Q = outParams.dims[1]; //width of output
+    size_t P = outParams.dims[0]; //height of output
 
     //printf("Checkpoint 3\n");
 
-    short UP = stride(H, P, R);
-    short UQ = stride(W, Q, S);
-
-    for (uint32_t p = 0; p < P; p++) {
+    for (uint32_t m = 0; m < M; m++) {
         //printf("Checkpoint 4. m = %d\n", m);
-        for (uint32_t q = 0; q < Q; q++) {
+        for (uint32_t p = 0; p < P; p++) {
             //printf("Checkpoint 5. p = %d\n", p);
-            for (uint32_t m = 0; m < M; m++) {
+            for (uint32_t q = 0; q < Q; q++) {
                 //printf("Checkpoint 6. q = %d\n", q);
-                fp32 thisOutput = 0;
-                for (uint32_t r = 0; r < R; r++) {
+                fp32 thisOutput = 0.0;
+                for (uint32_t c = 0; c < C; c++) { // something something joke
                     //printf("Checkpoint 7. c = %d\n", c);
-                    for (uint32_t s = 0; s < S; s++) { 
+                    for (uint32_t r = 0; r < R; r++) { 
                         //printf("Checkpoint 8. r = %d\n", r);
-                        for (uint32_t c = 0; c < C; c += 1) { //lol
+                        for (uint32_t s = 0; s < S; s++) { //lol
                             //printf("Checkpoint 9. s = %d\n", s);
 
-                            thisOutput += ((inData[UP + r][UQ + s][c] * filter[r][s][c][m]));
+                            thisOutput += ((inData[p+r][q+s][c] * filter[r][s][c][m]));
                         }
                     }
                 }
@@ -110,9 +97,6 @@ void ConvolutionalLayer::computeQuantized(const LayerData& dataIn) const {
             }
         }
     }
-
-    
-    //printf("%lf", data[0][0][0]);
 
 }
 
@@ -131,11 +115,11 @@ void threadFunction(
         //printf("thread launched\n");
         std::this_thread::yield();
 
-        for (uint32_t r = 0; r < R; r++) {
+        for (uint32_t c = 0; c < C; c++) {
             //printf("Checkpoint 7. c = %d\n", c);
-            for (uint32_t s = 0; s < S; s++) { 
+            for (uint32_t r = 0; r < R; r++) { 
                 //printf("Checkpoint 8. r = %d\n", r);
-                for (uint32_t c = 0; c < C; c += 1) { //lol
+                for (uint32_t s = 0; s < S; s++) {
                     //printf("Checkpoint 9. s = %d\n", s);
 
                     *thisOutput += ((inData[UP + r][UQ + s][c] * filter[r][s][c][m]));
@@ -151,26 +135,21 @@ void threadFunction(
 void ConvolutionalLayer::computeThreaded(const LayerData& dataIn) const {
     Array3D_fp32 inData = dataIn.getData<Array3D_fp32>();
     Array3D_fp32 outData = getOutputData().getData<Array3D_fp32>();
-    Array4D_fp32 filter = weightData.getData<Array4D_fp32>();
-    Array1D_fp32 biases = biasData.getData<Array1D_fp32>();
+    Array4D_fp32 filter = getWeightData().getData<Array4D_fp32>();
+    Array1D_fp32 biases = getBiasData().getData<Array1D_fp32>();
 
-    LayerParams inputParams = getInputParams();
-    size_t C = inputParams.dims[2]; //channels in input
-    size_t W = inputParams.dims[0]; //width of input
-    size_t H = inputParams.dims[1]; //height of input
+    LayerParams weightParams = getWeightParams();
+    size_t C = weightParams.dims[2]; //channels in input
+    size_t R = weightParams.dims[1]; //height of filter
+    size_t S = weightParam.dims[0]; //width of filter
+
 
     LayerParams outParams = getOutputParams();
     size_t M = outParams.dims[2]; //channels in output
-    size_t Q = outParams.dims[0]; //width of output
-    size_t P = outParams.dims[1]; //height of output
-
-    size_t R = weightParam.dims[0]; //height of filter
-    size_t S = weightParam.dims[1]; //width of filter
+    size_t Q = outParams.dims[1]; //width of output
+    size_t P = outParams.dims[0]; //height of output
 
     //printf("Checkpoint 3\n");
-
-    short UP = stride(H, P, R);
-    short UQ = stride(W, Q, S);
 
     size_t numThreads = std::thread::hardware_concurrency();
     numThreads = numThreads ? numThreads : 4;
@@ -181,11 +160,11 @@ void ConvolutionalLayer::computeThreaded(const LayerData& dataIn) const {
     
     //uint32_t threadIndex = 0;
 
-    for (uint32_t p = 0; p < P; p++) {
+    for (uint32_t m = 0; m < M; m++) {
         //printf("Checkpoint 4. m = %d\n", m);
-        for (uint32_t q = 0; q < Q; q++) {
+        for (uint32_t p = 0; p < P; p++) {
             //printf("Checkpoint 5. p = %d\n", p);
-            for (uint32_t m = 0; m < M; m++) {
+            for (uint32_t q = 0; q < Q; q++) {
                 //printf("Checkpoint 6. q = %d\n", q);
                 fp32* thisOutput = &outData[p][q][m];
 
@@ -197,8 +176,8 @@ void ConvolutionalLayer::computeThreaded(const LayerData& dataIn) const {
                         inData, 
                         filter, 
                         thisOutput, 
-                        UP, 
-                        UQ, 
+                        1, 
+                        1, 
                         m, 
                         R, 
                         S, 
@@ -209,7 +188,7 @@ void ConvolutionalLayer::computeThreaded(const LayerData& dataIn) const {
 
                 //printf("checking against max threads\n");
 
-                printf("threads.size: %d\n", (int)threads.size());
+                //printf("threads.size: %d\n", (int)threads.size());
 
                 if (threads.size() >= numThreads) {
                     //printf("joining all threads\n");
@@ -241,8 +220,8 @@ void ConvolutionalLayer::computeThreaded(const LayerData& dataIn) const {
 void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
     Array3D_fp32 inData = dataIn.getData<Array3D_fp32>();
     Array3D_fp32 outData = getOutputData().getData<Array3D_fp32>();
-    Array4D_fp32 filter = weightData.getData<Array4D_fp32>();
-    Array1D_fp32 biases = biasData.getData<Array1D_fp32>();
+    Array4D_fp32 filter = getWeightData().getData<Array4D_fp32>();
+    Array1D_fp32 biases = getBiasData().getData<Array1D_fp32>();
 
     LayerParams inputParams = getInputParams();
     size_t C = inputParams.dims[2]; //channels in input
@@ -258,9 +237,6 @@ void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
     size_t S = weightParam.dims[1]; //width of filter
 
     //printf("Checkpoint 3\n");
-
-    short UP = stride(H, P, R);
-    short UQ = stride(W, Q, S);
 
     uint8_t T = 1; //tile factor
     uint16_t CT = C / T;
@@ -286,7 +262,7 @@ void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
                                     
                                     if (c == 0 && r == 0 && s == 0) outData[p][q][m] = 0;
 
-                                    outData[p][q][m] += ((inData[UP + r][UQ + s][c] * filter[r][s][c][m]));
+                                    outData[p][q][m] += ((inData[p + r][q+ s][c] * filter[r][s][c][m]));
 
                                     if (c == C - 1 && r == R - 1 && s == S - 1) outData[p][q][m] = relu(outData[p][q][m] + biases[m]);
                                 }
@@ -302,9 +278,8 @@ void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
 
 // Compute the convolution using SIMD
 void ConvolutionalLayer::computeSIMD(const LayerData& dataIn) const {
-    // TODO: Your Code Here...
+    computeNaive(dataIn);
 }
 
 fp32 relu(const fp32 input) { return input < 0 ? 0 : input; }
-short stride(const size_t inDim, const size_t outDim, const size_t filterDim) { return (short)((inDim - filterDim) / (outDim - 1)); }
 }  // namespace ML

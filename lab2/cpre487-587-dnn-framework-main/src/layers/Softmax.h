@@ -2,11 +2,31 @@
 
 
 #include "../Types.h"
+#include "../Utils.h"
+#include "Layer.h"
 
 namespace ML {
-    
 
-    void softMax(Array1D_fp32 input, size_t size);
-    void softMax(Array1D_ui8 input, size_t size);
+    class SoftmaxLayer : public Layer {
+    public:
+     SoftmaxLayer(const LayerParams inParams, const LayerParams outParams)
+         : Layer(inParams, outParams, LayerType::SOFTMAX) {}
+
+    virtual void computeNaive(const LayerData& dataIn) const override;
+    virtual void computeQuantized(const LayerData& dataIn) const override;
+    virtual void computeThreaded(const LayerData& dataIn) const override;
+    virtual void computeTiled(const LayerData& dataIn) const override;
+    virtual void computeSIMD(const LayerData& dataIn) const override;
+
+    template <typename T> void allocateLayer() {
+        Layer::allocateOutputBuffer<Array1D<T>>();
+    }
+
+    // Fre all resources allocated for the layer
+    template <typename T> void freeLayer() {
+        Layer::freeOutputBuffer<Array1D<T>>();
+    }
+    };
+
     
 }

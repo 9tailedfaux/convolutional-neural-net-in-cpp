@@ -52,5 +52,4 @@ class ConvolutionalLayer : public Layer {
 };
 
 fp32 relu(const fp32 input);
-short stride(const size_t inDim, const size_t outDim, const size_t filterDim);
 }  // namespace ML
