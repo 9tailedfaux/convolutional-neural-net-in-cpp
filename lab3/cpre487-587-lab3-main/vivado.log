@@ -2,41 +2,53 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Dec 11 13:28:40 2023
-# Process ID: 259679
+# Start of session at: Mon Dec 11 14:39:53 2023
+# Process ID: 293757
 # Current directory: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main
 # Command line: vivado
 # Log file: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/vivado.log
 # Journal file: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/vivado.jou
 #-----------------------------------------------------------
 start_gui
-create_project 487_final_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw -part xc7vx485tffg1157-1
+open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.xpr
+INFO: [Project 1-313] Project file moved from '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw' since last save.
+WARNING: [Project 1-312] File not found as '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/staged_mac/hdl/zedboard.xdc'; using path '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc' instead.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-312] File not found as '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/staged_mac/hdl/zedboard.xdc'; using path '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc' instead.
+WARNING: [Project 1-312] File not found as '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/staged_mac/hdl/zedboard.xdc'; using path '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc' instead.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'.
 WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-file mkdir /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.srcs/sources_1/new
-set_property target_language VHDL [current_project]
-set_property simulator_language VHDL [current_project]
-close [ open /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.srcs/sources_1/new/booth_multiplier.vhd w ]
-add_files /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.srcs/sources_1/new/booth_multiplier.vhd
-add_files -fileset constrs_1 -norecurse /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc
 update_compile_order -fileset sources_1
+close_project
+open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.srcs/sources_1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'.
 update_compile_order -fileset sources_1
+open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'.
 update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 20
-[Mon Dec 11 14:11:37 2023] Launched synth_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.runs/synth_1/runme.log
 reset_run synth_1
 launch_runs synth_1 -jobs 20
-[Mon Dec 11 14:13:39 2023] Launched synth_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.runs/synth_1/runme.log
+[Mon Dec 11 14:50:41 2023] Launched synth_1...
+Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.runs/synth_1/runme.log
 launch_runs impl_1 -jobs 20
-[Mon Dec 11 14:14:27 2023] Launched impl_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.runs/impl_1/runme.log
+[Mon Dec 11 14:51:31 2023] Launched impl_1...
+Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.runs/impl_1/runme.log
 open_run impl_1
 INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7638.594 ; gain = 0.000 ; free physical = 16373 ; free virtual = 40271
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7686.641 ; gain = 0.000 ; free physical = 15461 ; free virtual = 39532
 INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.1
@@ -48,22 +60,54 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8360.164 ; gain = 0.000 ; free physical = 15705 ; free virtual = 39604
-Restored from archive | CPU: 0.030000 secs | Memory: 0.496429 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8360.164 ; gain = 0.000 ; free physical = 15705 ; free virtual = 39604
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8360.164 ; gain = 0.000 ; free physical = 15705 ; free virtual = 39603
+Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8404.281 ; gain = 0.000 ; free physical = 16914 ; free virtual = 40985
+Restored from archive | CPU: 0.030000 secs | Memory: 0.565811 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8404.281 ; gain = 0.000 ; free physical = 16914 ; free virtual = 40985
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8404.281 ; gain = 0.000 ; free physical = 16914 ; free virtual = 40985
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 8653.863 ; gain = 1190.051 ; free physical = 15531 ; free virtual = 39432
+open_run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 8707.074 ; gain = 1076.965 ; free physical = 16767 ; free virtual = 40841
 WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
-reset_run impl_1
+current_project tc_piped_mac
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8707.074 ; gain = 0.000 ; free physical = 16581 ; free virtual = 40681
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 9197.500 ; gain = 0.000 ; free physical = 16036 ; free virtual = 40169
+Restored from archive | CPU: 0.030000 secs | Memory: 0.683395 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 9197.500 ; gain = 0.000 ; free physical = 16036 ; free virtual = 40169
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9197.500 ; gain = 0.000 ; free physical = 16036 ; free virtual = 40169
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 9370.457 ; gain = 663.383 ; free physical = 15962 ; free virtual = 40094
+current_project 487_final_project
+create_clock -period 10.000 -waveform {0.000 5.000} [get_ports clk]
+current_project tc_piped_mac
+current_project 487_final_project
+set_property target_constrs_file /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Mon Dec 11 14:58:40 2023] Launched synth_1...
+Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.runs/synth_1/runme.log
 launch_runs impl_1 -jobs 20
-[Mon Dec 11 14:22:06 2023] Launched impl_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.runs/impl_1/runme.log
+[Mon Dec 11 15:00:03 2023] Launched impl_1...
+Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.runs/impl_1/runme.log
 close_design
 open_run impl_1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8653.863 ; gain = 0.000 ; free physical = 15562 ; free virtual = 39474
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9370.457 ; gain = 0.000 ; free physical = 15898 ; free virtual = 40034
 INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.1
@@ -75,13 +119,43 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8653.863 ; gain = 0.000 ; free physical = 15427 ; free virtual = 39339
-Restored from archive | CPU: 0.030000 secs | Memory: 0.476440 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8653.863 ; gain = 0.000 ; free physical = 15427 ; free virtual = 39339
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8653.863 ; gain = 0.000 ; free physical = 15427 ; free virtual = 39339
+Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 9370.457 ; gain = 0.000 ; free physical = 15756 ; free virtual = 39893
+Restored from archive | CPU: 0.030000 secs | Memory: 1.114357 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 9370.457 ; gain = 0.000 ; free physical = 15756 ; free virtual = 39893
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9370.457 ; gain = 0.000 ; free physical = 15756 ; free virtual = 39893
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Mon Dec 11 15:01:54 2023] Launched synth_1...
+Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.runs/synth_1/runme.log
+close_design
+launch_runs impl_1 -jobs 20
+[Mon Dec 11 15:02:36 2023] Launched impl_1...
+Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9391.367 ; gain = 0.000 ; free physical = 13747 ; free virtual = 37883
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 9391.367 ; gain = 0.000 ; free physical = 13621 ; free virtual = 37757
+Restored from archive | CPU: 0.030000 secs | Memory: 0.534676 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 9391.367 ; gain = 0.000 ; free physical = 13621 ; free virtual = 37757
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9391.367 ; gain = 0.000 ; free physical = 13621 ; free virtual = 37757
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+close_project
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Dec 11 14:28:09 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 11 15:04:12 2023...

@@ -2,34 +2,48 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Dec 11 13:28:40 2023
-# Process ID: 259679
+# Start of session at: Mon Dec 11 14:39:53 2023
+# Process ID: 293757
 # Current directory: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main
 # Command line: vivado
 # Log file: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/vivado.log
 # Journal file: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/vivado.jou
 #-----------------------------------------------------------
 start_gui
-create_project 487_final_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw -part xc7vx485tffg1157-1
-file mkdir /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.srcs/sources_1/new
-set_property target_language VHDL [current_project]
-set_property simulator_language VHDL [current_project]
-close [ open /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.srcs/sources_1/new/booth_multiplier.vhd w ]
-add_files /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.srcs/sources_1/new/booth_multiplier.vhd
-add_files -fileset constrs_1 -norecurse /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc
+open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.xpr
 update_compile_order -fileset sources_1
+close_project
+open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.xpr
 update_compile_order -fileset sources_1
+open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.xpr
 update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 20
-wait_on_run synth_1
 reset_run synth_1
 launch_runs synth_1 -jobs 20
 wait_on_run synth_1
 launch_runs impl_1 -jobs 20
 wait_on_run impl_1
 open_run impl_1
-reset_run impl_1
+current_project tc_piped_mac
+open_run impl_1
+current_project 487_final_project
+create_clock -period 10.000 -waveform {0.000 5.000} [get_ports clk]
+current_project tc_piped_mac
+current_project 487_final_project
+set_property target_constrs_file /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
 launch_runs impl_1 -jobs 20
 wait_on_run impl_1
 close_design
 open_run impl_1
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+close_design
+launch_runs impl_1 -jobs 20
+wait_on_run impl_1
+open_run impl_1
+close_project

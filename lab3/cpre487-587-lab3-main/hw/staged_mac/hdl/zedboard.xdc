@@ -369,7 +369,9 @@
 
 # Note that the bank voltage for IO Bank 13 is fixed to 3.3V on ZedBoard.
 
-create_clock -period 8.000 -name main -waveform {0.000 4.000} [get_ports ACLK]
 
 
+
+
+create_clock -period 15.000 -waveform {0.000 7.500} [get_ports clk]
 
