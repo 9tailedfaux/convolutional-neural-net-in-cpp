@@ -2,279 +2,42 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Oct 30 13:52:29 2023
-# Process ID: 905821
+# Start of session at: Mon Dec 11 13:28:40 2023
+# Process ID: 259679
 # Current directory: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main
 # Command line: vivado
 # Log file: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/vivado.log
 # Journal file: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.xpr
-Scanning sources...
-Finished scanning sources
-WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.srcs/sources_1'.
+create_project 487_final_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw -part xc7vx485tffg1157-1
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac'.
-WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac'.)
+INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'.
 WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 7365.184 ; gain = 32.125 ; free physical = 15011 ; free virtual = 41391
+file mkdir /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.srcs/sources_1/new
+set_property target_language VHDL [current_project]
+set_property simulator_language VHDL [current_project]
+close [ open /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.srcs/sources_1/new/booth_multiplier.vhd w ]
+add_files /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.srcs/sources_1/new/booth_multiplier.vhd
+add_files -fileset constrs_1 -norecurse /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/zedboard.xdc
 update_compile_order -fileset sources_1
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'piped_mac' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj piped_mac_vhdl.prj
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-xelab -wto c8c14c9bef744fc7a5cb103494afc3ff --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot piped_mac_behav xil_defaultlib.piped_mac -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto c8c14c9bef744fc7a5cb103494afc3ff --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot piped_mac_behav xil_defaultlib.piped_mac -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "piped_mac_behav -key {Behavioral:sim_1:Functional:piped_mac} -tclbatch {piped_mac.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source piped_mac.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'piped_mac_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-ls
-WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
-env.sh
-hw
-README.md
-sw
-vivado_1141053.backup.jou
-vivado_1141053.backup.log
-vivado_1152404.backup.jou
-vivado_1152404.backup.log
-vivado_1153219.backup.jou
-vivado_1153219.backup.log
-vivado_808052.backup.jou
-vivado_808052.backup.log
-vivado_878682.backup.jou
-vivado_878682.backup.log
-vivado.jou
-vivado.log
-vivado_pid1097545.str
-vivado_pid1144061.str
-vivado_pid27475.str
-vivado_pid878682.str
-vivado_pid905821.str
-cd hw/piped_mac/tb/tcl/
-ls
-WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
-piped_mac_tb.tcl
-source piped_mac_tb.tcl
-# relaunch_sim
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'piped_mac' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj piped_mac_vhdl.prj
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-xelab -wto c8c14c9bef744fc7a5cb103494afc3ff --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot piped_mac_behav xil_defaultlib.piped_mac -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto c8c14c9bef744fc7a5cb103494afc3ff --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot piped_mac_behav xil_defaultlib.piped_mac -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-# add_force {/piped_mac/ACLK} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
-# add_force {/piped_mac/ARESETN} -radix hex {0 0ns}
-# run 30ns
-# add_force {/piped_mac/ARESETN} -radix hex {1 0ns}
-# add_force {/piped_mac/M_AXIS_TREADY} -radix hex {1 0ns}
-ERROR: [Simtcl 6-8] No such HDL object /piped_mac/M_AXIS_TREADY
-relaunch_sim
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'piped_mac' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj piped_mac_vhdl.prj
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-xelab -wto c8c14c9bef744fc7a5cb103494afc3ff --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot piped_mac_behav xil_defaultlib.piped_mac -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto c8c14c9bef744fc7a5cb103494afc3ff --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot piped_mac_behav xil_defaultlib.piped_mac -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source piped_mac_tb.tcl
-# relaunch_sim
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'piped_mac' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj piped_mac_vhdl.prj
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.sim/sim_1/behav/xsim'
-xelab -wto c8c14c9bef744fc7a5cb103494afc3ff --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot piped_mac_behav xil_defaultlib.piped_mac -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto c8c14c9bef744fc7a5cb103494afc3ff --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot piped_mac_behav xil_defaultlib.piped_mac -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-# add_force {/piped_mac/ACLK} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
-# add_force {/piped_mac/ARESETN} -radix hex {0 0ns}
-# run 30ns
-# add_force {/piped_mac/ARESETN} -radix hex {1 0ns}
-# add_force {/piped_mac/MO_AXIS_TREADY} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TID} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {1111111122222222 0ns}
-# add_force {/piped_mac/SD_AXIS_TUSER} -radix hex {0 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {0 0ns}
-# run 50ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {0 0ns}
-# add_force {/piped_mac/SD_AXIS_TID} -radix hex {2 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {1111111122222222 0ns}
-# add_force {/piped_mac/SD_AXIS_TUSER} -radix hex {0 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {1010101020202020 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {0 0ns}
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {0 0ns}
-# run 50ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TID} -radix hex {3 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {0000AAAA0000BBBB 0ns}
-# add_force {/piped_mac/SD_AXIS_TUSER} -radix hex {0 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TID} -radix hex {4 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {0000444400005555 0ns}
-# add_force {/piped_mac/SD_AXIS_TUSER} -radix hex {0 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {0 0ns}
-# run 50ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {0 0ns}
-# add_force {/piped_mac/SD_AXIS_TID} -radix hex {5 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {0000000000001111 0ns}
-# add_force {/piped_mac/SD_AXIS_TUSER} -radix hex {1 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TID} -radix hex {6 0ns}
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {0000AAAA0000BBBB 0ns}
-# add_force {/piped_mac/SD_AXIS_TUSER} -radix hex {0 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {0 0ns}
-# run 50ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {0 0ns}
-# add_force {/piped_mac/SD_AXIS_TID} -radix hex {7 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {0000AAAA0000BBBB 0ns}
-# add_force {/piped_mac/SD_AXIS_TUSER} -radix hex {0 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {0 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TID} -radix hex {8 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {0000222200003333 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {0 0ns}
-# run 30ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TID} -radix hex {9 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {0000444400001101 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {0 0ns}
-# run 50 ns
-# add_force {/piped_mac/MO_AXIS_TREADY} -radix hex {1 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TLAST} -radix hex {1 0ns}
-# add_force {/piped_mac/SD_AXIS_TID} -radix hex {A 0ns}
-# add_force {/piped_mac/SD_AXIS_TDATA} -radix hex {1111111122222222 0ns}
-# add_force {/piped_mac/SD_AXIS_TUSER} -radix hex {0 0ns}
-# run 10ns
-# add_force {/piped_mac/SD_AXIS_TVALID} -radix hex {0 0ns}
-# run 30ns
-# add_force {/piped_mac/MO_AXIS_TREADY} -radix hex {0 0ns}
-# run 50ns
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/synth_1
-
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
 launch_runs synth_1 -jobs 20
-[Mon Oct 30 14:11:53 2023] Launched synth_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/synth_1/runme.log
+[Mon Dec 11 14:11:37 2023] Launched synth_1...
+Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Mon Dec 11 14:13:39 2023] Launched synth_1...
+Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.runs/synth_1/runme.log
 launch_runs impl_1 -jobs 20
-[Mon Oct 30 14:13:02 2023] Launched impl_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/impl_1/runme.log
+[Mon Dec 11 14:14:27 2023] Launched impl_1...
+Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.runs/impl_1/runme.log
 open_run impl_1
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7628.219 ; gain = 0.000 ; free physical = 13065 ; free virtual = 39453
-INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7638.594 ; gain = 0.000 ; free physical = 16373 ; free virtual = 40271
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -285,60 +48,23 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 7979.895 ; gain = 0.000 ; free physical = 14183 ; free virtual = 40571
-Restored from archive | CPU: 0.030000 secs | Memory: 0.671593 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 7979.895 ; gain = 0.000 ; free physical = 14183 ; free virtual = 40571
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7979.895 ; gain = 0.000 ; free physical = 14183 ; free virtual = 40571
+Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8360.164 ; gain = 0.000 ; free physical = 15705 ; free virtual = 39604
+Restored from archive | CPU: 0.030000 secs | Memory: 0.496429 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8360.164 ; gain = 0.000 ; free physical = 15705 ; free virtual = 39604
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8360.164 ; gain = 0.000 ; free physical = 15705 ; free virtual = 39603
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 8239.477 ; gain = 611.258 ; free physical = 14033 ; free virtual = 40422
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/synth_1
-
-launch_runs synth_1 -jobs 20
-[Mon Oct 30 14:16:23 2023] Launched synth_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 20
-[Mon Oct 30 14:17:09 2023] Launched impl_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/impl_1/runme.log
-close_design
-open_run impl_1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8239.477 ; gain = 0.000 ; free physical = 12573 ; free virtual = 38960
-INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8239.477 ; gain = 0.000 ; free physical = 12480 ; free virtual = 38867
-Restored from archive | CPU: 0.030000 secs | Memory: 0.667259 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8239.477 ; gain = 0.000 ; free physical = 12480 ; free virtual = 38867
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8239.477 ; gain = 0.000 ; free physical = 12480 ; free virtual = 38867
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-save_constraints -force
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/synth_1
-
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 8653.863 ; gain = 1190.051 ; free physical = 15531 ; free virtual = 39432
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
 reset_run impl_1
 launch_runs impl_1 -jobs 20
-[Mon Oct 30 14:21:17 2023] Launched synth_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/synth_1/runme.log
-[Mon Oct 30 14:21:17 2023] Launched impl_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/impl_1/runme.log
+[Mon Dec 11 14:22:06 2023] Launched impl_1...
+Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project.runs/impl_1/runme.log
 close_design
 open_run impl_1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8266.484 ; gain = 0.000 ; free physical = 12384 ; free virtual = 38779
-INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8653.863 ; gain = 0.000 ; free physical = 15562 ; free virtual = 39474
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -349,45 +75,13 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8266.484 ; gain = 0.000 ; free physical = 12297 ; free virtual = 38692
-Restored from archive | CPU: 0.030000 secs | Memory: 0.667435 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8266.484 ; gain = 0.000 ; free physical = 12297 ; free virtual = 38692
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8266.484 ; gain = 0.000 ; free physical = 12297 ; free virtual = 38692
+Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8653.863 ; gain = 0.000 ; free physical = 15427 ; free virtual = 39339
+Restored from archive | CPU: 0.030000 secs | Memory: 0.476440 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8653.863 ; gain = 0.000 ; free physical = 15427 ; free virtual = 39339
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8653.863 ; gain = 0.000 ; free physical = 15427 ; free virtual = 39339
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-reset_run impl_1
-launch_runs impl_1 -jobs 20
-[Mon Oct 30 14:35:46 2023] Launched impl_1...
-Run output will be captured here: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/impl_1/runme.log
-close_design
-open_run impl_1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8270.484 ; gain = 0.000 ; free physical = 13527 ; free virtual = 39982
-INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8270.484 ; gain = 0.000 ; free physical = 13445 ; free virtual = 39900
-Restored from archive | CPU: 0.030000 secs | Memory: 0.667458 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8270.484 ; gain = 0.000 ; free physical = 13445 ; free virtual = 39900
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8270.484 ; gain = 0.000 ; free physical = 13445 ; free virtual = 39900
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_project /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr
-Scanning sources...
-Finished scanning sources
-WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.srcs/sources_1'.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac'.
-WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac'.)
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'.
-update_compile_order -fileset sources_1
-close_project
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 11 14:28:09 2023...
