@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log booth_multiplier.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source booth_multiplier.tcl -notrace" );
+         "-log redundant_adder_tree.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source redundant_adder_tree.tcl -notrace" );
 
 
 

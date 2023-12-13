@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Dec 12 09:51:43 2023
+# Process ID: 14357
+# Current directory: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.sim/sim_1/behav/xsim/xsim.dir/tb_redundant_adder_tree_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/tjfriedl/Desktop/cpre_487/lab3/cpre487-587-lab3-main/hw/487_final_project/487_final_project.sim/sim_1/behav/xsim/xsim.dir/tb_redundant_adder_tree_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Dec 12 09:51:43 2023...

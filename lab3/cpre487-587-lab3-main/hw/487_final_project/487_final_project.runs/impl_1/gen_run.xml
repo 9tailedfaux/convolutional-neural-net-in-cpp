@@ -1,92 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1702328556">
+<GenRun Id="impl_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1702409033">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BITSTR-SYSDEF" Name="booth_multiplier.sysdef"/>
+  <File Type="BITSTR-SYSDEF" Name="redundant_adder_tree.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="booth_multiplier.ltx"/>
-  <File Type="BG-BGN" Name="booth_multiplier.bgn"/>
-  <File Type="NPI_FILE" Name="booth_multiplier.npi"/>
-  <File Type="BG-DRC" Name="booth_multiplier.drc"/>
-  <File Type="RNPI_FILE" Name="booth_multiplier.rnpi"/>
-  <File Type="CFI_FILE" Name="booth_multiplier.cfi"/>
-  <File Type="RCFI_FILE" Name="booth_multiplier.rcfi"/>
-  <File Type="PDI-FILE" Name="booth_multiplier.pdi"/>
-  <File Type="BITSTR-MMI" Name="booth_multiplier.mmi"/>
-  <File Type="BITSTR-BMM" Name="booth_multiplier_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="booth_multiplier.nky"/>
-  <File Type="BITSTR-RBT" Name="booth_multiplier.rbt"/>
-  <File Type="BITSTR-MSK" Name="booth_multiplier.msk"/>
-  <File Type="RBD_FILE" Name="booth_multiplier.rbd"/>
-  <File Type="BG-BIN" Name="booth_multiplier.bin"/>
-  <File Type="BG-BIT" Name="booth_multiplier.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="booth_multiplier_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="booth_multiplier_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="booth_multiplier_bus_skew_postroute_physopted.rpt"/>
-  <File Type="RDI-RDI" Name="booth_multiplier.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="booth_multiplier_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="booth_multiplier_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="booth_multiplier_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="booth_multiplier_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="booth_multiplier_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="booth_multiplier_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="booth_multiplier_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="booth_multiplier_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="booth_multiplier_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="booth_multiplier_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="booth_multiplier_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="booth_multiplier_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="booth_multiplier_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="booth_multiplier_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="booth_multiplier_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="booth_multiplier_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="booth_multiplier_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="booth_multiplier_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="booth_multiplier_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="booth_multiplier_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="booth_multiplier_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="booth_multiplier_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="booth_multiplier_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="booth_multiplier_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="booth_multiplier_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="booth_multiplier_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="booth_multiplier_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="booth_multiplier_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="booth_multiplier_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="booth_multiplier_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="booth_multiplier_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="booth_multiplier_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="booth_multiplier_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="booth_multiplier_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="booth_multiplier_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="booth_multiplier_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="booth_multiplier_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="booth_multiplier_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="booth_multiplier_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="booth_multiplier_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="booth_multiplier_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="booth_multiplier_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="booth_multiplier_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="booth_multiplier.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="booth_multiplier_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="booth_multiplier_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="booth_multiplier_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="booth_multiplier_timing_summary_init.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="booth_multiplier_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="booth_multiplier_reports.tcl"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="booth_multiplier_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="booth_multiplier.tcl"/>
+  <File Type="BITSTR-LTX" Name="redundant_adder_tree.ltx"/>
+  <File Type="BG-BGN" Name="redundant_adder_tree.bgn"/>
+  <File Type="NPI_FILE" Name="redundant_adder_tree.npi"/>
+  <File Type="BG-DRC" Name="redundant_adder_tree.drc"/>
+  <File Type="RNPI_FILE" Name="redundant_adder_tree.rnpi"/>
+  <File Type="CFI_FILE" Name="redundant_adder_tree.cfi"/>
+  <File Type="RCFI_FILE" Name="redundant_adder_tree.rcfi"/>
+  <File Type="PDI-FILE" Name="redundant_adder_tree.pdi"/>
+  <File Type="BITSTR-MMI" Name="redundant_adder_tree.mmi"/>
+  <File Type="BITSTR-BMM" Name="redundant_adder_tree_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="redundant_adder_tree.nky"/>
+  <File Type="BITSTR-RBT" Name="redundant_adder_tree.rbt"/>
+  <File Type="BITSTR-MSK" Name="redundant_adder_tree.msk"/>
+  <File Type="RBD_FILE" Name="redundant_adder_tree.rbd"/>
+  <File Type="BG-BIN" Name="redundant_adder_tree.bin"/>
+  <File Type="BG-BIT" Name="redundant_adder_tree.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="redundant_adder_tree_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="redundant_adder_tree_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="redundant_adder_tree_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="redundant_adder_tree.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="redundant_adder_tree_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="redundant_adder_tree_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="redundant_adder_tree_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="redundant_adder_tree_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="redundant_adder_tree_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="redundant_adder_tree_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="redundant_adder_tree_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="redundant_adder_tree_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="redundant_adder_tree_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="redundant_adder_tree_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="redundant_adder_tree_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="redundant_adder_tree_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="redundant_adder_tree_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="redundant_adder_tree_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="redundant_adder_tree_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="redundant_adder_tree_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="redundant_adder_tree_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="redundant_adder_tree_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="redundant_adder_tree_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="redundant_adder_tree_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="redundant_adder_tree_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="redundant_adder_tree_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="redundant_adder_tree_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="redundant_adder_tree_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="redundant_adder_tree_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="redundant_adder_tree_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="redundant_adder_tree_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="redundant_adder_tree_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="redundant_adder_tree_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="redundant_adder_tree_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="redundant_adder_tree_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="redundant_adder_tree_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="redundant_adder_tree_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="redundant_adder_tree_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="redundant_adder_tree_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="redundant_adder_tree_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="redundant_adder_tree_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="redundant_adder_tree_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="redundant_adder_tree_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="redundant_adder_tree_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="redundant_adder_tree_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="redundant_adder_tree_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="redundant_adder_tree_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="redundant_adder_tree.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="redundant_adder_tree_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="redundant_adder_tree_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="redundant_adder_tree_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="redundant_adder_tree_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="redundant_adder_tree_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="redundant_adder_tree_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="redundant_adder_tree_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="redundant_adder_tree.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/booth_multiplier.vhd">
+    <File Path="$PSRCDIR/sources_1/new/adder_cell.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/redundant_adder_tree.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/tb_redundant_adder_tree.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/tb_adder_cell.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="booth_multiplier"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="redundant_adder_tree"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

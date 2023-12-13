@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log booth_multiplier.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source booth_multiplier.tcl" );
+         "-log redundant_adder_tree.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source redundant_adder_tree.tcl" );
 
 
 

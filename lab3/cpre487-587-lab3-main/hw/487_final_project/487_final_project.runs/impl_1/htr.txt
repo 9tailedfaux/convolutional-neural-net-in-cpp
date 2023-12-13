@@ -6,4 +6,4 @@
 # Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log booth_multiplier.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source booth_multiplier.tcl -notrace
+vivado -log redundant_adder_tree.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source redundant_adder_tree.tcl -notrace
