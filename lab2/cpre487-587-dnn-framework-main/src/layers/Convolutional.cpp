@@ -262,7 +262,7 @@ void ConvolutionalLayer::computeTiled(const LayerData& dataIn) const {
     short UP = stride(H, P, R);
     short UQ = stride(W, Q, S);
 
-    uint8_t T = 1; //tile factor
+    uint8_t T = 32; //tile factor
     uint16_t CT = C / T;
     uint16_t MT = M / T;
 

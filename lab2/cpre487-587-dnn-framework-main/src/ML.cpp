@@ -262,7 +262,7 @@ int main(int argc, char** argv) {
     using std::chrono::milliseconds;
 
     auto start_time = high_resolution_clock::now();
-    runInfrenceTest(model, basePath, Layer::InfType::THREADED);
+    runLayerTest(0, model, basePath, Layer::InfType::TILED);
     auto end_time = high_resolution_clock::now();
 
     auto ms_int = duration_cast<milliseconds>(end_time - start_time);
